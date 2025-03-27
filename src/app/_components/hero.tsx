@@ -31,14 +31,14 @@ export default function Hero() {
       </div>
       <div className="absolute inset-0 z-30 text-white">
         <div className="container min-h-screen flex flex-col py-10">
-          <div className="font-manrope text-[80px] font-[700] leading-[110%] mt-auto">
+          <div className="font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%] mt-auto">
             Find your next <br /> property <span className="text-[#72A5E8]">with us</span>
           </div>
-          <div className="flex gap-6 w-[80%] ml-auto mt-auto">
+          <div className="flex gap-6 overflow-x-auto md:w-[80%] ml-auto mt-auto">
             {sectionHeroData.map((data, i) => {
               return (
-                <div key={i} className="border-t border-[#FFFFFF33] pt-3">
-                  <div className="font-manrope text-[24px] font-[500]">
+                <div key={i} className="min-w-fit md:min-w-auto border-t border-[#FFFFFF33] pt-3">
+                  <div className="font-manrope text-[20px] md:text-[24px] font-[500]">
                     {data.title}
                   </div>
                   <div className="text-[14px]">

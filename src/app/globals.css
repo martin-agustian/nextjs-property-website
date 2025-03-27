@@ -13,6 +13,7 @@
 }
 
 @utility container {
+  padding-inline: 2rem;
   margin-inline: auto;
 }
 
