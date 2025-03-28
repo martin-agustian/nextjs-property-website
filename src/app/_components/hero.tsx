@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import HeroImage from "../../../public/hero.png";
+
 export default function Hero() {
   const sectionHeroData = [
     {
@@ -17,18 +19,13 @@ export default function Hero() {
   ];
 
   return (
-    <div className="relative">
-      <div className="relative h-screen w-full">
-        <div className="absolute inset-0 bg-[#00000080] z-10" />
-        <div className="absolute inset-0 bg-linear-to-b from-[#1E284D00] to-[#1E284D99] z-20" />
-        <Image
-          src="/hero.png"
-          alt="hero.png"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-      </div>
+    <section id="hero" className="relative h-screen w-full max-w-full overflow-x-hidden">
+      <Image src={HeroImage} alt="Hero Image" layout="fill" className="object-cover" priority />
+
+      <div className="absolute inset-0 z-10 bg-[#00000080]" />
+      
+      <div className="absolute inset-0 z-20 bg-linear-to-b from-[#1E284D00] to-[#1E284D99]" />
+      
       <div className="absolute inset-0 z-30 text-white">
         <div className="container min-h-screen flex flex-col py-10">
           <div className="font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%] mt-auto">
@@ -50,6 +47,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

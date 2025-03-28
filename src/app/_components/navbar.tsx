@@ -1,10 +1,13 @@
-export default function Navbar() {
+import Image from "next/image";
+import ButtonPill from "./button-pill";
+
+export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
   const menuData = [
     "about", "our service", "our properties"
   ]; 
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-40 text-white">
+    <nav className={`fixed top-0 inset-x-0 z-40 ${isOutsideHero ? "text-black bg-white" : "text-white bg-transparent"}`}>
       <div className="container flex justify-between items-center py-3">
         <div className="flex items-center gap-14">
           <div className="text-[37px] font-inter font-[600]">
@@ -16,11 +19,23 @@ export default function Navbar() {
             })}
           </ul>
         </div>
-        <button className="hidden md:flex gap-3 items-center justify-center bg-[#FFFFFF1A] h-[45px] w-[141px] rounded-full">
-          <div className="bg-[#72A5E8] size-[10px] rounded-full" />
-          <div className="text-[16px] font-manrope font-[600]">
-            Contact Us
-          </div>
+
+        <ButtonPill 
+          className={`hidden md:flex h-[45px] ${isOutsideHero ? "bg-[#2B3F7D]" : "bg-[#FFFFFF1A]"}`}
+          textClassName="text-white"
+        >
+          Contact Us
+        </ButtonPill>
+
+        <button className="flex md:hidden items-center justify-center size-[40px] bg-[#3C69D4] rounded-full">
+          <Image
+            height={20}
+            width={20}
+            src="/burger-icon.svg"
+            alt="burger-icon.svg"
+            className="rounded-md"
+            priority
+          />
         </button>
       </div>
     </nav>

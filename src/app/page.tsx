@@ -1,3 +1,6 @@
+"use client"
+import { useEffect, useState } from "react";
+
 import About from "./_components/about";
 import Footer from "./_components/footer";
 import Hero from "./_components/hero";
@@ -8,9 +11,34 @@ import Service from "./_components/service";
 import Type from "./_components/type";
 
 export default function Home() {
+  const [isOutsideHero, setIsOutsideHero] = useState(false);
+
+  const checkScroll = () => {
+    const heroSection = document.getElementById("hero");
+    const scrollPosition = window.scrollY;
+
+    if (heroSection) {
+      const heroHeight = heroSection.offsetHeight;
+
+      if (scrollPosition > heroHeight) {
+        setIsOutsideHero(true);
+      } else {
+        setIsOutsideHero(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
+
   return (
     <>
-      <Navbar />
+      <Navbar {...{isOutsideHero}}  />
       <Hero />
       <About />
       <Type />
