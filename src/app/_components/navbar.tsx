@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="fixed top-0 inset-x-0 z-40 text-white">
       <div className="container flex justify-between items-center py-3">
         <div className="flex items-center gap-14">
-          <div className=" text-[37px] font-inter font-[600]">
+          <div className="text-[37px] font-inter font-[600]">
             Dwell
           </div>
           <ul className="hidden md:flex gap-8 text-[14px] font-manrope font-[700]">
