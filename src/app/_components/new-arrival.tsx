@@ -42,7 +42,7 @@ export default function NewArrival() {
       <Label>our new arrivals</Label>
       <Title className="mt-3">Discover our new arrivals</Title>
 
-      <div className="flex gap-5 overflow-x-scroll min-w-max">
+      <div className="flex gap-5 overflow-x-scroll min-w-max mt-10">
         {newArrivalData.map((data, i) => {
           return (
             <div key={i}>

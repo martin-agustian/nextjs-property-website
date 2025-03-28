@@ -2,6 +2,7 @@ import About from "./_components/about";
 import Hero from "./_components/hero";
 import Navbar from "./_components/navbar";
 import NewArrival from "./_components/new-arrival";
+import Service from "./_components/service";
 import Type from "./_components/type";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Type />
       <NewArrival />
+      <Service />
     </>
   );
 }
