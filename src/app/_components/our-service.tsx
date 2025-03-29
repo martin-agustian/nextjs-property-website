@@ -54,7 +54,7 @@ function ServiceAccordion({
 }) {
   return (
     <>
-      <div className="flex items-start gap-3 md:gap-5 lg:gap-8 border-b border-[#72A5E8] py-6 lg:px-3 lg:py-8" onClick={onClick}>
+      <div className="flex items-start gap-3 md:gap-5 lg:gap-8 border-b border-[#72A5E8] py-6 lg:px-3 lg:py-8 cursor-pointer" onClick={onClick}>
         <div className="flex-1 flex items-center justify-start gap-3">
           <div className={`flex-none md:flex-1 lg:flex-1 text-[12px] ${isActive ? "text-[#475569]" : "text-[#CBD5E1]"} font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
             {number}

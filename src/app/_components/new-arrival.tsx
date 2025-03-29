@@ -127,8 +127,8 @@ export default function NewArrival() {
           loop={true}
         >
           {newArrivalData.map((data, i) => (
-            <SwiperSlide>
-              <Card key={i} data={data} />
+            <SwiperSlide key={i}>
+              <Card data={data} />
             </SwiperSlide>
           ))}
         </Swiper>

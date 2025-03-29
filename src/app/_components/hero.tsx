@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import HeroImage from "../../../public/hero.png";
 
@@ -28,23 +29,53 @@ export default function Hero() {
       
       <div className="absolute inset-0 z-30 text-white">
         <div className="container min-h-screen flex flex-col py-10">
-          <div className="font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%] mt-auto">
-            Find your next <br /> property <span className="text-[#72A5E8]">with us</span>
+          <div className="flex justify-between items-center mt-auto">
+            <div className="font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%]">
+              Find your next <br /> property <span className="text-[#72A5E8]">with us</span>
+            </div>
+            <div className="hidden lg:flex items-center gap-2 rotate-[-90deg]">
+              <div className="font-inter text-[10px] leading-[122%] tracking-[5%] uppercase">
+                scroll
+              </div>
+              <div className="flex w-[50px]">
+                <div className="h-[1px] w-[30%] bg-[#F1F6FD]" />
+                <div className="h-[1px] w-[70%] bg-[#CBD5E14D]" />
+              </div>
+            </div>
           </div>
-          <div className="flex gap-6 overflow-x-auto md:w-[80%] ml-auto mt-auto">
-            {sectionHeroData.map((data, i) => {
-              return (
-                <div key={i} className="min-w-fit md:min-w-auto border-t border-[#FFFFFF33] pt-3">
-                  <div className="font-manrope text-[20px] md:text-[24px] font-[500]">
-                    {data.title}
+
+          <div className="w-full xl:w-[80%] ml-auto mt-auto">
+            <Swiper
+              breakpoints={{
+                768: {
+                  spaceBetween: 15,
+                  slidesPerView: 2.2,
+                },
+                1024: {
+                  spaceBetween: 15,
+                  slidesPerView: 3,
+                },
+              }}
+              spaceBetween={10}
+              slidesPerView={1.1}
+            >
+              {sectionHeroData.map((data, i) => (
+                <SwiperSlide key={i}>
+                  <div key={i} className="flex flex-col gap-2 min-w-fit md:min-w-auto border-t border-[#FFFFFF33] pt-3">
+                    <div className="font-manrope text-[20px] lg:text-[24px] font-[500]">
+                      {data.title}
+                    </div>
+                    <div className="text-[14px]">
+                      {data.description}
+                    </div>
                   </div>
-                  <div className="text-[14px]">
-                    {data.description}
-                  </div>
-                </div>
-              )
-            })}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
+
+          {/* <div className="flex gap-6 overflow-x-auto md:w-[80%] ml-auto mt-auto">            
+          </div> */}
         </div>
       </div>
     </section>
