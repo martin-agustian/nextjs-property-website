@@ -8,14 +8,14 @@ export default function Footer() {
           Dwell
         </div>
 
-        <div className="flex gap-16 md:gap-5 flex-col md:flex-row text-center md:text-left">
-          <div className="md:flex-2 order-1">
-            <div className="text-[24px] md:text-[28px] font-manrope font-[600] leading-[120%] mt-5">
+        <div className="flex gap-16 md:gap-10 lg:gap-5 flex-col md:flex-row text-center md:text-left">
+          <div className="md:flex-3 order-1">
+            <div className="text-[24px] lg:text-[28px] font-manrope font-[600] leading-[120%] mt-5">
               Stay informed about the <span className="text-[#3C6AD4]">latest property opportunities</span>
             </div>
 
-            <div className="relative inline-block mt-5">
-              <input placeholder="benoitmacke@car" className="h-[48px] w-[100%] md:w-[374px] bg-white text-black placeholder:text-[#94A3B8] rounded-full pl-3 pr-11" />
+            <div className="relative md:inline-block mt-5">
+              <input placeholder="benoitmacke@car" className="h-[40px] lg:h-[48px] w-[100%] md:w-[374px] bg-white text-black placeholder:text-[#94A3B8] rounded-full pl-3 pr-11" />
 
               <div className="size-[32px] flex items-center justify-center absolute top-[50%] translate-[-50%] right-[-10px] bg-[#C6DBF7] rounded-full">
                 <ArrowIcon2 color="#0F172A" className="size-[12px]" />
@@ -29,7 +29,7 @@ export default function Footer() {
             </label>
           </div>
 
-          <ul className="flex flex-col items-center md:items-start gap-3 text-[14px] font-[500] leading-[150%] capitalize order-3 md:order-2">
+          <ul className="md:flex-2 flex flex-col items-center md:items-start gap-3 text-[14px] font-[500] leading-[150%] capitalize order-3 md:order-2">
             <li className="flex items-center gap-3">
               <MapPinIcon color="#72A5E8" className="size-[16px]" />
               118 Maréchal Street, 1000 Brussels
@@ -44,7 +44,7 @@ export default function Footer() {
             </li>
           </ul>
 
-          <ul className="flex flex-col gap-3 text-[14px] font-inter font-[500] leading-[150%] capitalize order-2 md:order-3">
+          <ul className="md:flex-1 flex flex-col gap-3 text-[14px] font-inter font-[500] leading-[150%] capitalize order-2 md:order-3">
             <li>service</li>
             <li>properties</li>
             <li>contact</li>
