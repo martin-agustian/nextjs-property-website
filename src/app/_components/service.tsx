@@ -2,10 +2,11 @@ import Image from "next/image";
 import Label from "./label";
 import Title from "./title";
 import { ReactNode } from "react";
+import { ArrowIcon } from "./svg-icon";
 
 export default function Service() {
   return (
-    <div className="container py-10">
+    <section className="container py-10">
       <Label>Our Properties</Label>
       <Title className="mt-3">Real estate services tailored to every need</Title>
 
@@ -35,7 +36,7 @@ export default function Service() {
         <ServiceAccordion number="03" name="valuation" />
         <ServiceAccordion number="04" name="legal advice" />
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -59,13 +60,7 @@ function ServiceAccordion({
           {children}
         </div>
         <button className="flex items-center justify-center bg-[#3C69D4] size-[40px] min-w-[40px] rounded-full">
-          <Image
-            height={12}
-            width={16}
-            src="/arrow-icon.svg"
-            alt="arrow-icon.svg"
-            priority
-          />
+          <ArrowIcon color="white" className="h-[12px] w-[16px]" />
         </button>
       </div>
 

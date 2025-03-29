@@ -7,14 +7,13 @@ import { Autoplay } from "swiper/modules";
 import Label from "./label";
 import Title from "./title";
 import ButtonPill from "./button-pill";
+import { ArrowIcon, MapPinIcon } from "./svg-icon";
 
 // ** Images
 import Property1Image from "../../../public/property-1.png";
 import Property2Image from "../../../public/property-2.png";
 import Property3Image from "../../../public/property-3.png";
 import GradeImage from "../../../public/grade.png";
-import MapPinIcon from "../../../public/map-pin-icon.svg";
-import ArrowIcon from "../../../public/arrow-icon.svg";
 
 // ** CSS
 import "swiper/css";
@@ -76,7 +75,7 @@ export default function NewArrival() {
   const SwiperButton = forwardRef<HTMLButtonElement, { className: string, iconClassName: string, onClick?: MouseEventHandler }>(({ className, iconClassName, onClick }, ref) => {
     return (
       <button ref={ref} className={`absolute top-[176px] z-10 hidden lg:flex items-center justify-center size-[48px] bg-[#5185E0] rounded-full cursor-pointer ${className}`} onClick={onClick}>
-        <Image src={ArrowIcon} alt="Arrow Icon" className={`size-[16px] md:size-[20px] ${iconClassName}`} />
+        <ArrowIcon color="white" className={`size-[16px] md:size-[20px] ${iconClassName}`} />
       </button>
     );
   });
@@ -195,7 +194,7 @@ function Card({ data }: { data: NewArrivalData }) {
       </div>
 
       <div className="flex gap-2 items-start mt-3">
-        <Image src={MapPinIcon} alt="Map Pin Icon" className="size-[16px] md:size-[20px]" />
+        <MapPinIcon color="#3356C2" className="size-[16px] md:size-[20px] mt-[2px]" />
 
         <div className="text-[14px] md:text-[16px] text-[#3356C2] font-inter font-[400] md:font-[500] leading-[150%]">
           {data.address}

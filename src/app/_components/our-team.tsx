@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Label from "./label";
 import Title from "./title";
+import { EmailIcon } from "./svg-icon";
 
 import Profile1Image from "../../../public/profile-1.png";
 import Profile2Image from "../../../public/profile-2.png";
 import Profile3Image from "../../../public/profile-3.png";
-import EmailIcon from "../../../public/email-icon.svg";
 
 export default function OurTeam() {
 
@@ -51,7 +51,7 @@ export default function OurTeam() {
                   </div>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <Image src={EmailIcon} alt="Email Icon" className="size-[16px] rounded-md" />
+                  <EmailIcon color="#3C69D4" className="size-[16px] rounded-md" />
 
                   <div className="text-[16px] text-[#334155] font-inter font-[400] leading-[150%] tracking-[5%]">
                     {data.email}

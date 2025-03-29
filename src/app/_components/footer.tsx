@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { ArrowIcon2, EmailIcon, InstagramIcon, LinkedInIcon, MapPinIcon, PhoneIcon } from "./svg-icon";
 
 export default function Footer() {
   return (
-    <div className="bg-[#0F172A] text-white">
-      <div className="container py-10">
+    <footer className="bg-[#0F172A] text-white py-10">
+      <div className="container">
         <div className="text-[37px] text-center md:text-left font-inter font-[600]">
           Dwell
         </div>
@@ -14,45 +14,32 @@ export default function Footer() {
               Stay informed about the <span className="text-[#3C6AD4]">latest property opportunities</span>
             </div>
 
-            <div className="relative mt-5">
-              <input placeholder="benoitmacke@car" className="h-[48px] w-[374px] bg-white text-[#94A3B8] rounded-full pl-3" />
+            <div className="relative inline-block mt-5">
+              <input placeholder="benoitmacke@car" className="h-[48px] w-[100%] md:w-[374px] bg-white text-black placeholder:text-[#94A3B8] rounded-full pl-3 pr-11" />
+
+              <div className="size-[32px] flex items-center justify-center absolute top-[50%] translate-[-50%] right-[-10px] bg-[#C6DBF7] rounded-full">
+                <ArrowIcon2 color="#0F172A" className="size-[12px]" />
+              </div>
             </div>
-            
-            <div className="flex gap-3 mt-3">
-              <input id="agreement" type="checkbox" />
-              <label htmlFor="agreement" className="text-[14px]">I accept the privacy policy*.</label>
-            </div>
+
+            <label htmlFor="agreement" className="flex items-center space-x-2 font-inter mt-4">
+              <input type="checkbox" id="agreement" className="hidden peer" />
+              <span className="size-[16px] flex items-center justify-center cursor-pointer transition-colors peer-checked:bg-[#3C6AD4] peer-checked:border-[#3C6AD4] peer-checked:before:content-['✔'] border-1 border-white rounded-sm peer-checked:before:text-[11px] p-1" />
+              <span className="text-[14px] font-[400] leading-[150%]">I accept the privacy policy*.</span>
+            </label>
           </div>
 
           <ul className="flex flex-col items-center md:items-start gap-3 text-[14px] font-[500] leading-[150%] capitalize order-3 md:order-2">
-            <li className="flex gap-3">
-              <Image
-                height={16}
-                width={16}
-                src="/map-pin-icon.svg"
-                alt="map-pin-icon.svg"
-                priority
-              />
+            <li className="flex items-center gap-3">
+              <MapPinIcon color="#72A5E8" className="size-[16px]" />
               118 Maréchal Street, 1000 Brussels
             </li>
             <li className="flex gap-3">
-              <Image
-                height={16}
-                width={16}
-                src="/map-pin-icon.svg"
-                alt="map-pin-icon.svg"
-                priority
-              />
+              <PhoneIcon color="#72A5E8" className="size-[16px]" />
               +3 24 60 25 52 01
             </li>
             <li className="flex gap-3">
-              <Image
-                height={16}
-                width={16}
-                src="/email-icon.svg"
-                alt="email-icon.svg"
-                priority
-              />
+              <EmailIcon color="#72A5E8" className="size-[16px]" />
               contact@dwell.be
             </li>
           </ul>
@@ -67,24 +54,9 @@ export default function Footer() {
 
         <div className="flex gap-8 flex-col md:flex-row md:justify-between items-center text-[12px] font-inter mt-16">
           <div className="flex gap-5 order-2 md:order-1">
-            <div className="flex gap-2">
-              <Image
-                height={16}
-                width={16}
-                src="/ig-icon.svg"
-                alt="ig-icon.svg"
-                className="rounded-md"
-                priority
-              />
-              
-              <Image
-                height={16}
-                width={16}
-                src="/linkedin-icon.svg"
-                alt="linkedin-icon.svg"
-                className="rounded-md"
-                priority
-              />
+            <div className="flex gap-2">              
+              <InstagramIcon color="white" className="size-[16px]" />              
+              <LinkedInIcon color="white" className="size-[16px]" />
             </div>
             Eazyclick ©2024, all rights reserved
           </div>
@@ -101,6 +73,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

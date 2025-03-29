@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Label from "./label";
 import Title from "./title";
+import { GotoIcon } from "./svg-icon";
 
-import GotoIcon from "../../../public/goto-icon.svg";
 import HouseIcon from "../../../public/house-icon.svg";
 import ApartmentIcon from "../../../public/apartment-icon.svg";
 import CommercialIcon from "../../../public/commercial-icon.svg";
@@ -47,9 +47,8 @@ export default function Type() {
                   {type.label}
                 </div>
               </div>
-              <div>
-                <Image src={GotoIcon} alt="Go to Icon" className="size-[8px]" />
-              </div>
+
+              <GotoIcon color="black" className="size-[8px]" />
             </li>
           );
         })}

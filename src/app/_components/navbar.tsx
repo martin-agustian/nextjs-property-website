@@ -1,5 +1,5 @@
-import Image from "next/image";
 import ButtonPill from "./button-pill";
+import { BurgerIcon } from "./svg-icon";
 
 export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
   const menuData = [
@@ -28,14 +28,7 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
         </ButtonPill>
 
         <button className="flex md:hidden items-center justify-center size-[40px] bg-[#3C69D4] rounded-full">
-          <Image
-            height={20}
-            width={20}
-            src="/burger-icon.svg"
-            alt="burger-icon.svg"
-            className="rounded-md"
-            priority
-          />
+          <BurgerIcon color="white" className="size-[20px]" />
         </button>
       </div>
     </nav>
