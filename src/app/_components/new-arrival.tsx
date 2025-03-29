@@ -71,14 +71,14 @@ export default function NewArrival() {
   ];
 
   const swiperRef = useRef<SwiperClass>(null);
-
-  const SwiperButton = forwardRef<HTMLButtonElement, { className: string, iconClassName: string, onClick?: MouseEventHandler }>(({ className, iconClassName, onClick }, ref) => {
+  
+  const SwiperButton = ({ className, iconClassName, onClick } : { className: string, iconClassName: string, onClick?: MouseEventHandler }) => {
     return (
-      <button ref={ref} className={`absolute top-[176px] z-10 hidden lg:flex items-center justify-center size-[48px] bg-[#5185E0] rounded-full cursor-pointer ${className}`} onClick={onClick}>
+      <button className={`absolute top-[176px] z-10 hidden lg:flex items-center justify-center size-[48px] bg-[#5185E0] rounded-full cursor-pointer ${className}`} onClick={onClick}>
         <ArrowIcon color="white" className={`size-[16px] md:size-[20px] ${iconClassName}`} />
       </button>
-    );
-  });
+    )
+  };
 
   const DiscoverAllButton = ({ className } : { className?: string }) => {
     return (

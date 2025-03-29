@@ -7,7 +7,7 @@ import Hero from "./_components/hero";
 import Navbar from "./_components/navbar";
 import NewArrival from "./_components/new-arrival";
 import OurTeam from "./_components/our-team";
-import Service from "./_components/service";
+import OurService from "./_components/our-service";
 import Type from "./_components/type";
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
       <About />
       <Type />
       <NewArrival />
-      <Service />
+      <OurService />
       <OurTeam />
       <Footer />
     </>
