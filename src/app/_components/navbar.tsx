@@ -7,7 +7,7 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
   ]; 
 
   return (
-    <nav className={`fixed top-0 inset-x-0 z-40 ${isOutsideHero ? "text-black bg-white shadow-md" : "text-white bg-transparent"}`}>
+    <nav id="navbar" className={`fixed top-0 inset-x-0 z-40 ${isOutsideHero ? "text-black bg-white shadow-md" : "text-white bg-transparent"}`}>
       <div className="container flex justify-between items-center py-3">
         <div className="flex items-center gap-14">
           <div className="text-[37px] font-inter font-[600]">
@@ -21,7 +21,7 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
         </div>
 
         <ButtonPill 
-          className={`hidden lg:flex h-[45px] ${isOutsideHero ? "bg-[#2B3F7D]" : "bg-[#FFFFFF1A]"}`}
+          className={`hidden lg:flex h-[45px] ${isOutsideHero ? "bg-[#2B3F7D]" : "bg-[#FFFFFF1A]"} pr-5`}
           textClassName="text-white"
         >
           Contact Us

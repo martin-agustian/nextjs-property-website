@@ -7,7 +7,7 @@ import MeetingImage from "../../../public/meeting.png";
 
 export default function About() {
   return (
-    <section className="bg-[#F1F6FD] py-10">
+    <section id="about" className="bg-[#F1F6FD] py-10">
       <div className="container flex flex-col lg:flex-row gap-10 xl:gap-14 items-center">
         <div className="w-full">
           <Image src={MeetingImage} alt="Meeting Ilustration" className="h-auto md:h-[465px] w-full md:w-[465px] md:min-w-[465px] object-cover rounded-md" />

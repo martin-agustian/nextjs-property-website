@@ -31,7 +31,7 @@ export default function OurTeam() {
   ]
 
   return (
-    <section className="bg-[#F1F6FD] py-10">
+    <section id="our-team" className="bg-[#F1F6FD] py-10">
       <div className="container">
         <Label>our team</Label>
         <Title className="mt-3">Meet our team of experts</Title>

@@ -15,7 +15,7 @@ export default function OurService() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <section className="container py-10">
+    <section id="our-service" className="container py-10">
       <Label>Our Services</Label>
       <Title className="mt-3">Real estate services tailored to every need</Title>
 

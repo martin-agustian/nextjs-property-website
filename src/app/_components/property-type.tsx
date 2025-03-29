@@ -8,7 +8,7 @@ import ApartmentIcon from "../../../public/apartment-icon.svg";
 import CommercialIcon from "../../../public/commercial-icon.svg";
 import StudentHousingIcon from "../../../public/student-housing-icon.svg";
 
-export default function Type() {
+export default function PropertyType() {
 
   const typeData = [
     {
@@ -30,7 +30,7 @@ export default function Type() {
   ];
 
   return (
-    <section className="container py-10">
+    <section id="property-type" className="container py-10">
       <Label>Our Properties</Label>
 
       <Title className="mt-3">Types of Properties</Title>

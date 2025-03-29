@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative h-screen w-full max-w-full overflow-x-hidden">
-      <Image src={HeroImage} alt="Hero Image" layout="fill" className="object-cover" priority />
+      <Image src={HeroImage} alt="Hero Image" className="absolute inset-0 h-full w-full object-cover" priority />
 
       <div className="absolute inset-0 z-10 bg-[#00000080]" />
       
