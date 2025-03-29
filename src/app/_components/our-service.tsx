@@ -1,13 +1,14 @@
-import { ReactNode, useState } from "react";
-import Image from "next/image";
-import Label from "./label";
-import Title from "./title";
-import { ArrowIcon } from "./svg-icon";
+import { useState } from "react";
 
-import BuildingImage from "../../../public/building.png";
+import Image from "next/image";
+import Label from "@/components/ui/label";
+import Title from "@/components/ui/title";
+import ArrowIcon from "@/components/icons/arrow-icon";
+
+import BuildingImage from "@/assets/images/building.png";
 
 // ** Types
-import type { MouseEventHandler } from "react";
+import type { MouseEventHandler, ReactNode } from "react";
 
 export default function OurService() {
   const serviceData = ["sales", "property management", "valuation", "legal advice"];

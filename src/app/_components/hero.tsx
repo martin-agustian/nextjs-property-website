@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import HeroImage from "../../../public/hero.png";
+import HeroImage from "@/assets/images/hero.png";
 
 export default function Hero() {
   const sectionHeroData = [

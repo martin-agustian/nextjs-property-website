@@ -1,19 +1,21 @@
-import { forwardRef, useRef } from "react";
+import { useRef } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 // ** Components
 import Image from "next/image";
-import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import Label from "./label";
-import Title from "./title";
-import ButtonPill from "./button-pill";
-import { ArrowIcon, MapPinIcon } from "./svg-icon";
+import ArrowIcon from "@/components/icons/arrow-icon";
+import MapPinIcon from "@/components/icons/map-pin-icon";
+import ButtonPill from "@/components/ui/button-pill";
+import Label from "@/components/ui/label";
+import Title from "@/components/ui/title";
 
 // ** Images
-import Property1Image from "../../../public/property-1.png";
-import Property2Image from "../../../public/property-2.png";
-import Property3Image from "../../../public/property-3.png";
-import GradeImage from "../../../public/grade.png";
+import Property1Image from "@/assets/images/property-1.png";
+import Property2Image from "@/assets/images/property-2.png";
+import Property3Image from "@/assets/images/property-3.png";
+import GradeImage from "@/assets/images/grade.png";
 
 // ** CSS
 import "swiper/css";
@@ -22,6 +24,7 @@ import "swiper/css/pagination";
 
 // ** Types
 import type { StaticImageData } from "next/image";
+import type { SwiperClass } from "swiper/react";
 import type { MouseEventHandler } from "react";
 
 type NewArrivalData = {

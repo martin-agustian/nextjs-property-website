@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Label from "./label";
-import Title from "./title";
-import { EmailIcon } from "./svg-icon";
 
-import Profile1Image from "../../../public/profile-1.png";
-import Profile2Image from "../../../public/profile-2.png";
-import Profile3Image from "../../../public/profile-3.png";
+import Label from "@/components/ui/label";
+import Title from "@/components/ui/title";
+import EmailIcon from "@/components/icons/email-icon";
+
+import Profile1Image from "@/assets/images/profile-1.png";
+import Profile2Image from "@/assets/images/profile-2.png";
+import Profile3Image from "@/assets/images/profile-3.png";
 
 export default function OurTeam() {
 

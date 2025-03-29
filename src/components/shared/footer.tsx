@@ -1,4 +1,9 @@
-import { ArrowIcon2, EmailIcon, InstagramIcon, LinkedInIcon, MapPinIcon, PhoneIcon } from "./svg-icon";
+import ArrowIcon2 from "../icons/arrow-icon-2";
+import InstagramIcon from "../icons/instagram-icon";
+import LinkedInIcon from "../icons/linkedin-icon";
+import MapPinIcon from "../icons/map-pin-icon";
+import PhoneIcon from "../icons/phone-icon";
+import EmailIcon from "../icons/email-icon";
 
 export default function Footer() {
   return (

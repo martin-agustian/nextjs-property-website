@@ -1,16 +1,17 @@
-"use client"
+"use client";
 import { useEffect, useRef, useState } from "react";
 
-import About from "./_components/about";
-import Footer from "./_components/footer";
+// ** Components
+import Navbar from "@/components/shared/navbar";
+import Footer from "@/components/shared/footer";
 import Hero from "./_components/hero";
-import Navbar from "./_components/navbar";
-import NewArrival from "./_components/new-arrival";
-import OurTeam from "./_components/our-team";
-import OurService from "./_components/our-service";
+import About from "./_components/about";
 import PropertyType from "./_components/property-type";
+import NewArrival from "./_components/new-arrival";
+import OurService from "./_components/our-service";
+import OurTeam from "./_components/our-team";
 
-export default function Home() {
+export default function Page() {
   const latestScrollPosition = useRef<number>(0);
 
   const [isScrolling, setIsScrolling] = useState<boolean>(false);

@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Label from "./label";
-import Title from "./title";
-import { GotoIcon } from "./svg-icon";
+import Label from "@/components/ui/label";
+import Title from "@/components/ui/title";
+import GotoIcon from "@/components/icons/goto-icon";
 
-import HouseIcon from "../../../public/house-icon.svg";
-import ApartmentIcon from "../../../public/apartment-icon.svg";
-import CommercialIcon from "../../../public/commercial-icon.svg";
-import StudentHousingIcon from "../../../public/student-housing-icon.svg";
+import HouseIcon from "@/assets/icons/house-icon.svg";
+import ApartmentIcon from "@/assets/icons/apartment-icon.svg";
+import CommercialIcon from "@/assets/icons/commercial-icon.svg";
+import StudentHousingIcon from "@/assets/icons/student-housing-icon.svg";
 
 export default function PropertyType() {
 

@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Label from "./label";
-import Title from "./title";
-import ButtonPill from "./button-pill";
+import Label from "@/components/ui/label";
+import Title from "@/components/ui/title";
+import ButtonPill from "@/components/ui/button-pill";
 
-import MeetingImage from "../../../public/meeting.png";
+import MeetingImage from "@/assets/images/meeting.png";
 
 export default function About() {
   return (
