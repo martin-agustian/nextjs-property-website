@@ -2,29 +2,35 @@ import Image from "next/image";
 import Label from "./label";
 import Title from "./title";
 
+import GotoIcon from "../../../public/goto-icon.svg";
+import HouseIcon from "../../../public/house-icon.svg";
+import ApartmentIcon from "../../../public/apartment-icon.svg";
+import CommercialIcon from "../../../public/commercial-icon.svg";
+import StudentHousingIcon from "../../../public/student-housing-icon.svg";
+
 export default function Type() {
 
   const typeData = [
     {
       label: "house",
-      icon: "house-icon.svg",
+      icon: HouseIcon,
     },
     {
       label: "apartment",
-      icon: "apartment-icon.svg",
+      icon: ApartmentIcon,
     },
     {
       label: "commercial",
-      icon: "commercial-icon.svg",
+      icon: CommercialIcon,
     },
     {
       label: "student housing",
-      icon: "student-housing-icon.svg",
+      icon: StudentHousingIcon,
     }
   ];
 
   return (
-    <div className="container py-10">
+    <section className="container py-10">
       <Label>Our Properties</Label>
 
       <Title className="mt-3">Types of Properties</Title>
@@ -35,31 +41,19 @@ export default function Type() {
             <li key={i} className="flex items-center justify-between bg-[#F1F6FD] rounded-md px-6 py-4">
               <div className="flex items-center gap-5">
                 <div className="flex items-center justify-center bg-[#DFEBFA] size-[51px] rounded-full">
-                  <Image
-                    height={26}
-                    width={26}
-                    src={type.icon}
-                    alt={type.icon}
-                    priority
-                  />
+                  <Image src={type.icon} alt="Property Types Icon" className="size-[26px]" />
                 </div>
                 <div className="text-[#3356C2] capitalize">
                   {type.label}
                 </div>
               </div>
               <div>
-                <Image
-                  height={8}
-                  width={8}
-                  src="/goto-icon.svg"
-                  alt="goto-icon.svg"
-                  priority
-                />
+                <Image src={GotoIcon} alt="Go to Icon" className="size-[8px]" />
               </div>
             </li>
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 }

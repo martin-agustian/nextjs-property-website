@@ -30,6 +30,7 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener("scroll", checkScroll);
+    checkScroll();
 
     return () => {
       window.removeEventListener("scroll", checkScroll);

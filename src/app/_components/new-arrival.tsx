@@ -1,17 +1,29 @@
-import Image, { StaticImageData } from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { forwardRef, useRef } from "react";
+
+// ** Components
+import Image from "next/image";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import Label from "./label";
 import Title from "./title";
+import ButtonPill from "./button-pill";
 
 // ** Images
 import Property1Image from "../../../public/property-1.png";
 import Property2Image from "../../../public/property-2.png";
 import Property3Image from "../../../public/property-3.png";
-import GradeImage from "../../../public/grade.png"
-import MapPinIcon from "../../../public/map-pin-icon.svg"
+import GradeImage from "../../../public/grade.png";
+import MapPinIcon from "../../../public/map-pin-icon.svg";
+import ArrowIcon from "../../../public/arrow-icon.svg";
 
 // ** CSS
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// ** Types
+import type { StaticImageData } from "next/image";
+import type { MouseEventHandler } from "react";
 
 type NewArrivalData = {
   type: string
@@ -57,40 +69,93 @@ export default function NewArrival() {
       bedroom: 1,
       bathroom: 1,
     },
-  ]
+  ];
+
+  const swiperRef = useRef<SwiperClass>(null);
+
+  const SwiperButton = forwardRef<HTMLButtonElement, { className: string, iconClassName: string, onClick?: MouseEventHandler }>(({ className, iconClassName, onClick }, ref) => {
+    return (
+      <button ref={ref} className={`absolute top-[176px] z-10 hidden lg:flex items-center justify-center size-[48px] bg-[#5185E0] rounded-full cursor-pointer ${className}`} onClick={onClick}>
+        <Image src={ArrowIcon} alt="Arrow Icon" className={`size-[16px] md:size-[20px] ${iconClassName}`} />
+      </button>
+    );
+  });
+
+  const DiscoverAllButton = ({ className } : { className?: string }) => {
+    return (
+      <ButtonPill className={`h-[48px] border-[1.5px] border-[#C6DBF7] ${className}`} dotClassName="bg-[#3356C2]">
+        Discover all our properties
+      </ButtonPill>
+    )
+  }
 
   return (
-    <section id="new-arrival" className="container">
+    <section id="new-arrival" className="container py-10">
       <Label>our new arrivals</Label>
-      <Title className="mt-3">Discover our new arrivals</Title>
+      
+      <div className="flex items-center justify-between mt-3">
+        <Title>Discover our new arrivals</Title>
+        <DiscoverAllButton className="hidden lg:flex" />
+      </div>
 
-      <Swiper
-        breakpoints={{
-          768: {
-            // width: 768,
-            spaceBetween: 20,
-            slidesPerView: 2.5,
-          },
-        }}
-        spaceBetween={10}
-        slidesPerView={1.1}
-        className="mt-10"
-      >
-        {newArrivalData.map((data, i) => (
-          <SwiperSlide>
-            <Card key={i} data={data} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="relative">
+        <Swiper
+          className="relative mt-10"
+          onInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          breakpoints={{
+            768: {
+              spaceBetween: 15,
+              slidesPerView: 1.7,
+            },
+            1024: {
+              spaceBetween: 15,
+              slidesPerView: 1.9,
+            },
+            1280: {
+              spaceBetween: 15,
+              slidesPerView: 2.3,
+            },
+          }}
+          spaceBetween={10}
+          slidesPerView={1.1}
+          modules={[Autoplay]}
+          autoplay={{ 
+            delay: 3000, 
+            disableOnInteraction: true 
+          }}
+          loop={true}
+        >
+          {newArrivalData.map((data, i) => (
+            <SwiperSlide>
+              <Card key={i} data={data} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <SwiperButton 
+          className="left-[-20px] swiper-nav-prev pr-1" 
+          iconClassName="rotate-270" 
+          onClick={() => { swiperRef.current?.slidePrev(); }} 
+        />
+        <SwiperButton 
+          className="right-[-20px] swiper-nav-next pl-1" 
+          iconClassName="rotate-90" 
+          onClick={() => { swiperRef.current?.slideNext(); }} 
+        />
+      </div>
+
+      <DiscoverAllButton className="flex lg:hidden mx-auto mt-10" />
     </section>
   );
 }
 
 function Card({ data }: { data: NewArrivalData }) {
   return (
-    <div>
-      <div className="inline-block relative h-[392px] rounded-md">
-        <Image src={data.image} alt="Property Image" className="h-full w-full rounded-md" priority />
+    <>
+      <div className="inline-block relative h-[352px] w-full rounded-md">
+        <Image src={data.image} alt="Property Image" className="h-full w-full object-cover rounded-md" priority />
 
         <div className="absolute inset-0 z-20 bg-linear-to-b from-[#1E284D00] to-[#1E284D99] rounded-md" />
 
@@ -106,10 +171,10 @@ function Card({ data }: { data: NewArrivalData }) {
               <Image src={GradeImage} alt="Grade" className="h-[26px] w-[92px]" />
             </div>
 
-            <div className="flex gap-5 md:gap-0 flex-col md:flex-row md:justify-between mt-auto">
+            <div className="flex gap-5 lg:gap-0 flex-col lg:flex-row lg:justify-between mt-auto">
               <CardBottomLabel label="price" data={data.price} dataClass="text-[24px]" />
 
-              <div className="flex gap-3 md:gap-5">
+              <div className="flex gap-3 lg:gap-5">
                 <CardBottomLabel label="area" data={data.area} />
                 <CardBottomDivider />
                 <CardBottomLabel label="bedrooms" data={data.bedroom} />                
@@ -136,7 +201,7 @@ function Card({ data }: { data: NewArrivalData }) {
           {data.address}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
