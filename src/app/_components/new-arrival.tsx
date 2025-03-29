@@ -210,7 +210,7 @@ function Card({ data }: { data: NewArrivalData }) {
 function CardBottomLabel({
   className, label, labelClass, data, dataClass 
 } : { 
-  className?: string, label: string, labelClass?: string, data: any, dataClass?: string
+  className?: string, label: string, labelClass?: string, data: number | string, dataClass?: string
 }) {
 
   return (
