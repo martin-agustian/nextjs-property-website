@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Label from "@/components/ui/label";
 import Title from "@/components/ui/title";
+import Section from "@/components/ui/section";
 import ArrowIcon from "@/components/icons/arrow-icon";
 
 import BuildingImage from "@/assets/images/building.png";
@@ -16,14 +17,14 @@ export default function OurService() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <section id="our-service" className="container py-10">
+    <Section id="our-service" className="container py-10" animationClass="our-service">
       <Label>Our Services</Label>
       <Title className="mt-3">Real estate services tailored to every need</Title>
 
       <div className="flex flex-col mt-10">
         {serviceData.map((data, i) => (
           <ServiceAccordion 
-            key={i} 
+            id={`segment-${i + 1}`} key={i} 
             isActive={activeIndex === i}
             number={(i+1).toString().padStart(2, "0")} 
             name={data} 
@@ -44,18 +45,19 @@ export default function OurService() {
           </ServiceAccordion>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
 
 function ServiceAccordion({
-  number, name, isActive, children, onClick
+  id, number, name, isActive, children, onClick
 } : {
-  number: string, name: string, isActive: boolean, children?: ReactNode, onClick?: MouseEventHandler
+  id?: string, number: string, name: string, isActive: boolean, 
+  children?: ReactNode, onClick?: MouseEventHandler
 }) {
   return (
     <>
-      <div className="flex items-start gap-3 md:gap-5 lg:gap-8 border-b border-[#72A5E8] py-6 lg:px-3 lg:py-8 cursor-pointer" onClick={onClick}>
+      <div id={id} className="flex items-start gap-3 md:gap-5 lg:gap-8 border-b border-[#72A5E8] py-6 lg:px-3 lg:py-8 cursor-pointer" onClick={onClick}>
         <div className="flex-1 flex items-center justify-start gap-3">
           <div className={`flex-none md:flex-1 lg:flex-1 text-[12px] ${isActive ? "text-[#475569]" : "text-[#CBD5E1]"} font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
             {number}

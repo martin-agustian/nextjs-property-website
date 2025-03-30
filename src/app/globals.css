@@ -1,15 +1,31 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter);
+    scroll-behavior: smooth;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-inter: var(--font-inter);
   --font-manrope: var(--font-manrope);
+
+  --animate-slide-to-right: slideToRight 1s ease-in-out 1;
+  --animate-slide-to-left: slideToLeft 1s ease-in-out 1;
+  --animate-slide-to-up: slideToUp 1s ease-in-out 1;
+
+  --animate-fade-in: fadeInOpacity 1s ease-in-out 1;  
 }
 
 @utility container {
@@ -21,16 +37,114 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ===== ANIMATION ===== */
+.hero #segment-1 {
+	animation: slideToRight 1s ease-in 0s 1;
+}
+.hero #segment-2 {
+  animation: slideToRight 1s ease-in 0s 1;
+}
+.hero #segment-3 {
+  animation: slideToUp 1s ease-in 0s 1;
+}
+
+.about #segment-1 {
+  animation: fadeInOpacity 2s ease-out 0s 1;
+}
+.about #segment-2 {
+  animation: slideToLeft 0.5s ease-in 0s 1;
+}
+.about #segment-2-1 {
+  opacity: 0;
+  animation: fadeInOpacity 1s ease-in 1s 1;
+  animation-fill-mode: forwards;
+}
+.about #segment-2-2 {
+  animation: ping 1s ease-in 2s 3;
+}
+ 
+.property-type [id^="segment-"],
+.our-team [id^="segment-"] {
+  opacity: 0;
+  animation: fadeInOpacity 1s ease-in 0s 1;
+  animation-fill-mode: forwards;
+}
+.property-type #segment-2,
+.our-team #segment-2 {
+  animation-delay: 1s;
+}
+.property-type #segment-3,
+.our-team #segment-3 {
+  animation-delay: 2s;
+}
+.property-type #segment-4 {
+  animation-delay: 3s;
+}
+
+.new-arrival #segment-1 {
+  opacity: 0;
+  animation: fadeInOpacity 1s ease-in 1s 1;
+  animation-fill-mode: forwards;
+}
+.new-arrival #segment-1-1 {
+  animation: ping 1s ease-in 2s 3;
+}
+.new-arrival #segment-2 {
+  animation: fadeInOpacity 1s ease-in 0s 1;
+}
+
+.our-service [id^="segment-"] {
+  opacity: 0;
+  animation: fadeInOpacity 1s ease-in 0s 1;
+  animation-fill-mode: forwards;
+}
+.our-service #segment-2 {
+  animation-delay: 1s;
+}
+.our-service #segment-3 {
+  animation-delay: 2s;
+}
+.our-service #segment-4 {
+  animation-delay: 3s;
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideToUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

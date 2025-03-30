@@ -10,6 +10,7 @@ import MapPinIcon from "@/components/icons/map-pin-icon";
 import ButtonPill from "@/components/ui/button-pill";
 import Label from "@/components/ui/label";
 import Title from "@/components/ui/title";
+import Section from "@/components/ui/section";
 
 // ** Images
 import Property1Image from "@/assets/images/property-1.png";
@@ -83,24 +84,24 @@ export default function NewArrival() {
     )
   };
 
-  const DiscoverAllButton = ({ className } : { className?: string }) => {
+  const DiscoverAllButton = ({ id, dotId, className } : { id?: string, dotId?: string, className?: string }) => {
     return (
-      <ButtonPill className={`h-[48px] border-[1.5px] border-[#C6DBF7] ${className}`} dotClassName="bg-[#3356C2]">
+      <ButtonPill id={id} dotId={dotId} className={`h-[48px] border-[1.5px] border-[#C6DBF7] ${className}`} dotClassName="bg-[#3356C2]">
         Discover all our properties
       </ButtonPill>
     )
   }
 
   return (
-    <section id="new-arrival" className="container py-10">
+    <Section id="new-arrival" className="container py-10" animationClass="new-arrival">
       <Label>our new arrivals</Label>
       
       <div className="flex items-center justify-between mt-3">
         <Title>Discover our new arrivals</Title>
-        <DiscoverAllButton className="hidden lg:flex" />
+        <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="hidden lg:flex" />
       </div>
 
-      <div className="relative">
+      <div id="segment-2" className="relative">
         <Swiper
           className="relative mt-10"
           onInit={(swiper) => {
@@ -149,7 +150,7 @@ export default function NewArrival() {
       </div>
 
       <DiscoverAllButton className="flex lg:hidden mx-auto mt-10" />
-    </section>
+    </Section>
   );
 }
 

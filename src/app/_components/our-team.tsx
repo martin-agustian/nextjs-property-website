@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Label from "@/components/ui/label";
 import Title from "@/components/ui/title";
+import Section from "@/components/ui/section";
 import EmailIcon from "@/components/icons/email-icon";
 
 import Profile1Image from "@/assets/images/profile-1.png";
@@ -32,15 +33,15 @@ export default function OurTeam() {
   ]
 
   return (
-    <section id="our-team" className="bg-[#F1F6FD] py-10">
+    <Section id="our-team" className="bg-[#F1F6FD] py-10" animationClass="our-team">
       <div className="container">
         <Label>our team</Label>
         <Title className="mt-3">Meet our team of experts</Title>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
           {ourTeamData.map((data, i) => {
             return (
-              <div key={i} className="flex flex-col gap-5">
+              <div id={`segment-${i + 1}`} key={i} className="flex flex-col gap-4 rounded-md cursor-default p-2">
                 <Image src={data.image} alt="Profile Image" className="w-full object-cover rounded-md" />
 
                 <div className="flex flex-col gap-2">
@@ -51,7 +52,7 @@ export default function OurTeam() {
                     {data.title}
                   </div>
                 </div>
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center cursor-pointer" onClick={() => window.open(`mailto:${data.email}`)}>
                   <EmailIcon color="#3C69D4" className="size-[16px] rounded-md" />
 
                   <div className="text-[16px] text-[#334155] font-inter font-[400] leading-[150%] tracking-[5%]">
@@ -63,6 +64,6 @@ export default function OurTeam() {
           })}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

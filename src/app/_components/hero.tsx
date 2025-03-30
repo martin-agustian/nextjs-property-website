@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import HeroImage from "@/assets/images/hero.png";
+import Section from "@/components/ui/section";
 
 export default function Hero() {
   const sectionHeroData = [
@@ -20,7 +21,7 @@ export default function Hero() {
   ];
 
   return (
-    <section id="hero" className="relative h-screen w-full max-w-full overflow-x-hidden">
+    <Section id="hero" className="relative h-screen w-full max-w-full overflow-x-hidden" animationClass="hero">
       <Image src={HeroImage} alt="Hero Image" className="absolute inset-0 h-full w-full object-cover" priority />
 
       <div className="absolute inset-0 z-10 bg-[#00000080]" />
@@ -30,10 +31,10 @@ export default function Hero() {
       <div className="absolute inset-0 z-30 text-white">
         <div className="container min-h-screen flex flex-col py-10">
           <div className="flex justify-between items-center mt-auto">
-            <div className="font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%]">
+            <div id="segment-1" className="font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%]">
               Find your next <br /> property <span className="text-[#72A5E8]">with us</span>
             </div>
-            <div className="hidden lg:flex items-center gap-2 rotate-[-90deg]">
+            <div id="segment-2" className="hidden lg:flex items-center gap-2 rotate-[-90deg]">
               <div className="font-inter text-[10px] leading-[122%] tracking-[5%] uppercase">
                 scroll
               </div>
@@ -44,7 +45,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="w-full xl:w-[80%] ml-auto mt-auto">
+          <div id="segment-3" className="w-full xl:w-[80%] ml-auto mt-auto">
             <Swiper
               breakpoints={{
                 768: {
@@ -73,11 +74,8 @@ export default function Hero() {
               ))}
             </Swiper>
           </div>
-
-          {/* <div className="flex gap-6 overflow-x-auto md:w-[80%] ml-auto mt-auto">            
-          </div> */}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
