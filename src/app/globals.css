@@ -70,7 +70,7 @@
   animation-fill-mode: forwards;
 }
 .hero #segment-2 {
-  animation: slideToRight 1s ease-in 0s 1;
+  animation: slideToDownScrollHero 1s ease-in 0s 1;
   animation-fill-mode: forwards;
 }
 .hero #segment-3 {
@@ -175,6 +175,14 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes slideToDownScrollHero {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 @keyframes slideToUp {
