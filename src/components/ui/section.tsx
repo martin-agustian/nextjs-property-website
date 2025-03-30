@@ -10,6 +10,7 @@ export const Section = ({
 }) => {
 
   const sectionRef = useRef(null);
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export const Section = ({
         if (entry.isIntersecting) {
           setIsVisible(true);
         } else {
-          setIsVisible(false);
+          // setIsVisible(false);
         }
       },
       {
@@ -36,6 +37,7 @@ export const Section = ({
         observer.unobserve(sectionRef.current);
       }
     };
+    
   }, []);
 
   return (

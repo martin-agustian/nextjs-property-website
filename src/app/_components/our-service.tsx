@@ -25,6 +25,7 @@ export default function OurService() {
         {serviceData.map((data, i) => (
           <ServiceAccordion 
             id={`segment-${i + 1}`} key={i} 
+            className="opacity-0"
             isActive={activeIndex === i}
             number={(i+1).toString().padStart(2, "0")} 
             name={data} 
@@ -50,14 +51,14 @@ export default function OurService() {
 }
 
 function ServiceAccordion({
-  id, number, name, isActive, children, onClick
+  id, className, number, name, isActive, children, onClick
 } : {
-  id?: string, number: string, name: string, isActive: boolean, 
+  id?: string, className: string, number: string, name: string, isActive: boolean, 
   children?: ReactNode, onClick?: MouseEventHandler
 }) {
   return (
     <>
-      <div id={id} className="flex items-start gap-3 md:gap-5 lg:gap-8 border-b border-[#72A5E8] py-6 lg:px-3 lg:py-8 cursor-pointer" onClick={onClick}>
+      <div id={id} className={`flex items-start gap-3 md:gap-5 lg:gap-8 border-b border-[#72A5E8] py-6 lg:px-3 lg:py-8 cursor-pointer ${className}`} onClick={onClick}>
         <div className="flex-1 flex items-center justify-start gap-3">
           <div className={`flex-none md:flex-1 lg:flex-1 text-[12px] ${isActive ? "text-[#475569]" : "text-[#CBD5E1]"} font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
             {number}

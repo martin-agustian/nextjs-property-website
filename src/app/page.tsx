@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // ** Components
 import Navbar from "@/components/shared/navbar";
@@ -21,11 +21,18 @@ export default function Page() {
   useEffect(() => {
     // Disable scrolling when the component mounts
     document.body.style.overflow = "hidden";
+    document.body.scrollTo(0, 0);
+    window.history.scrollRestoration = "manual";
 
     // After 5 seconds, enable scrolling again
     const timeout = setTimeout(() => {
+      const loadingScreen = document.getElementById("loading-screen");
+
+      if (loadingScreen) {
+        loadingScreen.style.display = "none";
+      }
+
       document.body.style.overflow = "auto";
-      document.getElementById("loading-screen")?.remove();
     }, 5000);
 
     // Clean up the timeout when the component unmounts

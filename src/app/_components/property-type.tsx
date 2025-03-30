@@ -39,7 +39,7 @@ export default function PropertyType() {
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10">
         {typeData.map((type, i) => {
           return (
-            <li id={`segment-${i + 1}`} key={i} className="flex items-center justify-between bg-[#F1F6FD] rounded-md px-6 py-4">
+            <li id={`segment-${i + 1}`} key={i} className="opacity-0 flex items-center justify-between bg-[#F1F6FD] rounded-md px-6 py-4">
               <div className="flex items-center gap-5">
                 <div className="flex items-center justify-center bg-[#DFEBFA] size-[51px] rounded-full">
                   <Image src={type.icon} alt="Property Types Icon" className="size-[26px]" />

@@ -41,7 +41,7 @@ export default function OurTeam() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
           {ourTeamData.map((data, i) => {
             return (
-              <div id={`segment-${i + 1}`} key={i} className="flex flex-col gap-4 rounded-md cursor-default p-2">
+              <div id={`segment-${i + 1}`} key={i} className="opacity-0 flex flex-col gap-4 rounded-md cursor-default p-2">
                 <Image src={data.image} alt="Profile Image" className="w-full object-cover rounded-md" />
 
                 <div className="flex flex-col gap-2">

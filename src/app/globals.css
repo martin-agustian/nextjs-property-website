@@ -40,22 +40,26 @@
 /* ===== ANIMATION ===== */
 .hero #segment-1 {
 	animation: slideToRight 1s ease-in 0s 1;
+  animation-fill-mode: forwards;
 }
 .hero #segment-2 {
   animation: slideToRight 1s ease-in 0s 1;
+  animation-fill-mode: forwards;
 }
 .hero #segment-3 {
   animation: slideToUp 1s ease-in 0s 1;
+  animation-fill-mode: forwards;
 }
 
 .about #segment-1 {
   animation: fadeInOpacity 2s ease-out 0s 1;
+  animation-fill-mode: forwards;
 }
 .about #segment-2 {
   animation: slideToLeft 0.5s ease-in 0s 1;
+  animation-fill-mode: forwards;
 }
 .about #segment-2-1 {
-  opacity: 0;
   animation: fadeInOpacity 1s ease-in 1s 1;
   animation-fill-mode: forwards;
 }
@@ -65,7 +69,6 @@
  
 .property-type [id^="segment-"],
 .our-team [id^="segment-"] {
-  opacity: 0;
   animation: fadeInOpacity 1s ease-in 0s 1;
   animation-fill-mode: forwards;
 }
@@ -82,7 +85,6 @@
 }
 
 .new-arrival #segment-1 {
-  opacity: 0;
   animation: fadeInOpacity 1s ease-in 1s 1;
   animation-fill-mode: forwards;
 }
@@ -91,10 +93,10 @@
 }
 .new-arrival #segment-2 {
   animation: fadeInOpacity 1s ease-in 0s 1;
+  animation-fill-mode: forwards;
 }
 
 .our-service [id^="segment-"] {
-  opacity: 0;
   animation: fadeInOpacity 1s ease-in 0s 1;
   animation-fill-mode: forwards;
 }
@@ -134,26 +136,26 @@
 
 @keyframes slideToRight {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
 }
 @keyframes slideToLeft {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 }
 @keyframes slideToUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(0%);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(-100%);
   }
 }
 

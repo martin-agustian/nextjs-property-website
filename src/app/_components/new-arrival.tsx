@@ -98,10 +98,10 @@ export default function NewArrival() {
       
       <div className="flex items-center justify-between mt-3">
         <Title>Discover our new arrivals</Title>
-        <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="hidden lg:flex" />
+        <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 hidden lg:flex" />
       </div>
 
-      <div id="segment-2" className="relative">
+      <div id="segment-2" className="opacity-0 relative">
         <Swiper
           className="relative mt-10"
           onInit={(swiper) => {
@@ -149,7 +149,7 @@ export default function NewArrival() {
         />
       </div>
 
-      <DiscoverAllButton className="flex lg:hidden mx-auto mt-10" />
+      <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 flex lg:hidden mx-auto mt-10" />
     </Section>
   );
 }
