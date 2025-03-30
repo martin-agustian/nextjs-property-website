@@ -4,6 +4,19 @@
   :root {
     --background: #ffffff;
     --foreground: #171717;
+    --alice-blue: #F1F6FD;
+    --cadet-grey: #94A3B8;
+    --cobalt: #2B3F7D;
+    --crulean-blue: #3356C2;
+    --dark-pastel-blue: #72A5E8;
+    --dark-sky-blue: #5185E0;
+    --iron: #CBD5E1;
+    --lavender-mist: #DFEBFA;
+    --mariner: #3C6AD4;
+    --mirage: #0F172A;
+    --pickled-bluewood: #334155;
+    --river-bed: #475569;
+    --tropical-blue: #C6DBF7;
   }
 
   body {
@@ -17,6 +30,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-alice-blue: var(--alice-blue);
+  --color-cadet-grey: var(--cadet-grey);
+  --color-cobalt: var(--cobalt);
+  --color-crulean-blue: var(--crulean-blue);
+  --color-dark-pastel-blue: var(--dark-pastel-blue);
+  --color-dark-sky-blue: var(--dark-sky-blue);
+  --color-iron: var(--iron);
+  --color-lavender-mist: var(--lavender-mist);
+  --color-mariner: var(--mariner);
+  --color-mirage: var(--mirage);
+  --color-pickled-bluewood: var(--pickled-bluewood);
+  --color-river-bed: var(--river-bed);
+  --color-tropical-blue: var(--tropical-blue);
 
   --font-inter: var(--font-inter);
   --font-manrope: var(--font-manrope);

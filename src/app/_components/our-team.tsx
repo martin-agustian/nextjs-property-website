@@ -33,7 +33,7 @@ export default function OurTeam() {
   ]
 
   return (
-    <Section id="our-team" className="bg-[#F1F6FD] py-10" animationClass="our-team">
+    <Section id="our-team" className="bg-alice-blue py-10" animationClass="our-team">
       <div className="container">
         <Label>our team</Label>
         <Title className="mt-3">Meet our team of experts</Title>
@@ -45,17 +45,17 @@ export default function OurTeam() {
                 <Image src={data.image} alt="Profile Image" className="w-full object-cover rounded-md" />
 
                 <div className="flex flex-col gap-2">
-                  <div className="text-[24px] text-[#0F172A] font-manrope font-[500] leading-[120%]">
+                  <div className="text-[24px] text-mirage font-manrope font-[500] leading-[120%]">
                     {data.name}
                   </div>
-                  <div className="text-[12px] text-[#3C6AD4] font-manrope font-[800] leading-[150%] tracking-[5%] uppercase">
+                  <div className="text-[12px] text-mariner font-manrope font-[800] leading-[150%] tracking-[5%] uppercase">
                     {data.title}
                   </div>
                 </div>
                 <div className="flex gap-2 items-center cursor-pointer" onClick={() => window.open(`mailto:${data.email}`)}>
                   <EmailIcon color="#3C69D4" className="size-[16px] rounded-md" />
 
-                  <div className="text-[16px] text-[#334155] font-[400] leading-[150%] tracking-[5%]">
+                  <div className="text-[16px] text-pickled-bluewood font-[400] leading-[150%] tracking-[5%]">
                     {data.email}
                   </div>
                 </div>

@@ -78,7 +78,7 @@ export default function NewArrival() {
   
   const SwiperButton = ({ className, iconClassName, onClick } : { className: string, iconClassName: string, onClick?: MouseEventHandler }) => {
     return (
-      <button className={`absolute top-[176px] z-10 hidden lg:flex items-center justify-center size-[48px] bg-[#5185E0] rounded-full cursor-pointer ${className}`} onClick={onClick}>
+      <button className={`absolute top-[176px] z-10 hidden lg:flex items-center justify-center size-[48px] bg-dark-sky-blue rounded-full cursor-pointer ${className}`} onClick={onClick}>
         <ArrowIcon color="white" className={`size-[16px] md:size-[20px] ${iconClassName}`} />
       </button>
     )
@@ -86,7 +86,7 @@ export default function NewArrival() {
 
   const DiscoverAllButton = ({ id, dotId, className } : { id?: string, dotId?: string, className?: string }) => {
     return (
-      <ButtonPill id={id} dotId={dotId} className={`h-[48px] border-[1.5px] border-[#C6DBF7] ${className}`} dotClassName="bg-[#3356C2]">
+      <ButtonPill id={id} dotId={dotId} className={`h-[48px] border-[1.5px] border-tropical-blue ${className}`} dotClassName="bg-crulean-blue">
         Discover all our properties
       </ButtonPill>
     )
@@ -131,7 +131,7 @@ export default function NewArrival() {
           loop={true}
         >
           {newArrivalData.map((data, i) => (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} className="cursor-pointer">
               <Card data={data} />
             </SwiperSlide>
           ))}
@@ -189,7 +189,7 @@ function Card({ data }: { data: NewArrivalData }) {
         </div>
       </div>
 
-      <div className="text-[12px] text-[#3C6AD4] font-manrope font-[800] leading-[150%] tracking-[5%] uppercase mt-3">
+      <div className="text-[12px] text-mariner font-manrope font-[800] leading-[150%] tracking-[5%] uppercase mt-3">
         for {data.type}
       </div>
 
@@ -200,7 +200,7 @@ function Card({ data }: { data: NewArrivalData }) {
       <div className="flex gap-2 items-start mt-3">
         <MapPinIcon color="#3356C2" className="size-[16px] md:size-[20px] mt-[2px]" />
 
-        <div className="text-[14px] md:text-[16px] text-[#3356C2] font-[400] md:font-[500] leading-[150%]">
+        <div className="text-[14px] md:text-[16px] text-crulean-blue font-[400] md:font-[500] leading-[150%]">
           {data.address}
         </div>
       </div>
@@ -216,7 +216,7 @@ function CardBottomLabel({
 
   return (
     <div className={`flex flex-col gap-3 ${className}`}>
-      <div className={`text-[12px] text-[#C6DBF7] font-manrope font-[800] leading-[150%] tracking-[5%] uppercase ${labelClass}`}>
+      <div className={`text-[12px] text-tropical-blue font-manrope font-[800] leading-[150%] tracking-[5%] uppercase ${labelClass}`}>
         {label}
       </div>
       <div className={`text-[16px] text-white font-[600] leading-[90%] ${dataClass}`}>

@@ -35,7 +35,7 @@ export default function OurService() {
               <div className="flex flex-col lg:flex-row gap-3 lg:gap-5">
                 <Image src={BuildingImage} alt="Building Image" className="h-[230px] w-full md:w-[216px] md:min-w-[216px] object-cover rounded-md" />
                 
-                <div className="text-[14px] text-[#334155] font-[400] leading-[150%]">
+                <div className="text-[14px] text-pickled-bluewood font-[400] leading-[150%]">
                   Our agency offers you a comprehensive and diverse range of services, 
                   carefully tailored to each stage of your real estate project. 
                   Whether you are a buyer, seller, tenant, investor, or simply seeking informed advice, 
@@ -58,19 +58,19 @@ function ServiceAccordion({
 }) {
   return (
     <>
-      <div id={id} className={`flex items-start gap-3 md:gap-5 lg:gap-8 border-b border-[#72A5E8] py-6 lg:px-3 lg:py-8 cursor-pointer ${className}`} onClick={onClick}>
+      <div id={id} className={`flex items-start gap-3 md:gap-5 lg:gap-8 group border-b border-dark-pastel-blue py-6 lg:px-3 lg:py-8 cursor-pointer ${className}`} onClick={onClick}>
         <div className="flex-1 flex items-center justify-start gap-3">
-          <div className={`flex-none md:flex-1 lg:flex-1 text-[12px] ${isActive ? "text-[#475569]" : "text-[#CBD5E1]"} font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
+          <div className={`flex-none md:flex-1 lg:flex-1 text-[12px] ${isActive ? "text-river-bed" : "text-iron"} group-hover:text-river-bed font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
             {number}
           </div>
-          <div className={`flex-1 md:flex-2 lg:flex-3 text-[24px] ${isActive ? "text-[#3356C2]" : "text-[#94A3B8]"} font-manrope font-[500] leading-[120%] capitalize`}>
+          <div className={`flex-1 md:flex-2 lg:flex-3 text-[24px] ${isActive ? "text-crulean-blue" : "text-cadet-grey"} group-hover:text-crulean-blue font-manrope font-[500] leading-[120%] capitalize`}>
             {name}
           </div>
         </div>
         <div className="flex-[1.5] hidden md:block">
           {children}
         </div>
-        <button className="flex-none flex items-center justify-center bg-[#3C69D4] size-[36px] lg:size-[40px] lg:min-w-[40px] rounded-full">
+        <button className="flex-none flex items-center justify-center bg-mariner size-[36px] lg:size-[40px] lg:min-w-[40px] rounded-full">
           <ArrowIcon color="white" className={`h-[12px] w-[16px] ${isActive ? "rotate-0" : "rotate-180"}`} />
         </button>
       </div>

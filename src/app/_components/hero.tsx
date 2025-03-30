@@ -32,14 +32,14 @@ export default function Hero() {
         <div className="container min-h-screen flex flex-col py-10">
           <div className="flex justify-between items-center mt-auto">
             <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%]">
-              Find your next <br /> property <span className="text-[#72A5E8]">with us</span>
+              Find your next <br /> property <span className="text-dark-pastel-blue">with us</span>
             </div>
             <div id="segment-2" className="-translate-x-full hidden lg:flex items-center gap-2 rotate-[-90deg]">
               <div className="text-[10px] leading-[122%] tracking-[5%] uppercase">
                 scroll
               </div>
               <div className="flex w-[50px]">
-                <div className="h-[1px] w-[30%] bg-[#F1F6FD]" />
+                <div className="h-[1px] w-[30%] bg-alice-blue" />
                 <div className="h-[1px] w-[70%] bg-[#CBD5E14D]" />
               </div>
             </div>
