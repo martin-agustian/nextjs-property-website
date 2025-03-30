@@ -53,8 +53,8 @@ export default function Page() {
 
         // Only allow scroll action if not currently scrolling
         if (isScrolling) return;
-
-        if (currentScrollPosition < (heroHeight - navbarHeight)) {
+        
+        if (currentScrollPosition < navbarHeight) {
           setIsOutsideHero(false);
 
           if (currentScrollPosition > latestScrollPosition.current) {
