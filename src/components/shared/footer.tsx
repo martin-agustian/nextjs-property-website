@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F172A] text-white py-10">
       <div className="container">
-        <div className="text-[37px] text-center md:text-left font-inter font-[600]">
+        <div className="text-[37px] text-center md:text-left font-[600]">
           Dwell
         </div>
 
@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <label htmlFor="agreement" className="flex items-center space-x-2 font-inter mt-4">
+            <label htmlFor="agreement" className="flex items-center space-x-2 mt-4">
               <input type="checkbox" id="agreement" className="hidden peer" />
               <span className="size-[16px] flex items-center justify-center cursor-pointer transition-colors peer-checked:bg-[#3C6AD4] peer-checked:border-[#3C6AD4] peer-checked:before:content-['✔'] border-1 border-white rounded-sm peer-checked:before:text-[11px] p-1" />
               <span className="text-[14px] font-[400] leading-[150%] cursor-pointer">I accept the privacy policy*.</span>
@@ -49,7 +49,7 @@ export default function Footer() {
             </li>
           </ul>
 
-          <ul className="md:flex-1 flex flex-col gap-3 text-[14px] font-inter font-[500] leading-[150%] capitalize order-2 md:order-3">
+          <ul className="md:flex-1 flex flex-col gap-3 text-[14px] font-[500] leading-[150%] capitalize order-2 md:order-3">
             <li className="cursor-pointer hover:text-[#72A5E8]">service</li>
             <li className="cursor-pointer hover:text-[#72A5E8]">properties</li>
             <li className="cursor-pointer hover:text-[#72A5E8]">contact</li>
@@ -57,7 +57,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex gap-8 flex-col md:flex-row md:justify-between items-center text-[12px] font-inter mt-16">
+        <div className="flex gap-8 flex-col md:flex-row md:justify-between items-center text-[12px] mt-16">
           <div className="flex gap-5 order-2 md:order-1">
             <div className="flex gap-2">
               <div className="cursor-pointer" onClick={() => window.open('https://instagram.com')}>

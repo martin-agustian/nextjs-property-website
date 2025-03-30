@@ -200,7 +200,7 @@ function Card({ data }: { data: NewArrivalData }) {
       <div className="flex gap-2 items-start mt-3">
         <MapPinIcon color="#3356C2" className="size-[16px] md:size-[20px] mt-[2px]" />
 
-        <div className="text-[14px] md:text-[16px] text-[#3356C2] font-inter font-[400] md:font-[500] leading-[150%]">
+        <div className="text-[14px] md:text-[16px] text-[#3356C2] font-[400] md:font-[500] leading-[150%]">
           {data.address}
         </div>
       </div>
@@ -219,7 +219,7 @@ function CardBottomLabel({
       <div className={`text-[12px] text-[#C6DBF7] font-manrope font-[800] leading-[150%] tracking-[5%] uppercase ${labelClass}`}>
         {label}
       </div>
-      <div className={`text-[16px] text-white font-inter font-[600] leading-[90%] ${dataClass}`}>
+      <div className={`text-[16px] text-white font-[600] leading-[90%] ${dataClass}`}>
         {data}
       </div>
     </div>

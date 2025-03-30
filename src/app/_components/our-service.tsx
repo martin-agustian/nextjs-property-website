@@ -35,7 +35,7 @@ export default function OurService() {
               <div className="flex flex-col lg:flex-row gap-3 lg:gap-5">
                 <Image src={BuildingImage} alt="Building Image" className="h-[230px] w-full md:w-[216px] md:min-w-[216px] object-cover rounded-md" />
                 
-                <div className="text-[14px] text-[#334155] font-inter font-[400] leading-[150%]">
+                <div className="text-[14px] text-[#334155] font-[400] leading-[150%]">
                   Our agency offers you a comprehensive and diverse range of services, 
                   carefully tailored to each stage of your real estate project. 
                   Whether you are a buyer, seller, tenant, investor, or simply seeking informed advice, 

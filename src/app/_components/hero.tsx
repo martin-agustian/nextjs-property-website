@@ -35,7 +35,7 @@ export default function Hero() {
               Find your next <br /> property <span className="text-[#72A5E8]">with us</span>
             </div>
             <div id="segment-2" className="-translate-x-full hidden lg:flex items-center gap-2 rotate-[-90deg]">
-              <div className="font-inter text-[10px] leading-[122%] tracking-[5%] uppercase">
+              <div className="text-[10px] leading-[122%] tracking-[5%] uppercase">
                 scroll
               </div>
               <div className="flex w-[50px]">

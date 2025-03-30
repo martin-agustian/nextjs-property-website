@@ -20,23 +20,30 @@ export default function Page() {
 
   useEffect(() => {
     // Disable scrolling when the component mounts
-    document.body.style.overflow = "hidden";
-    document.body.scrollTo(0, 0);
-    window.history.scrollRestoration = "manual";
+    const screen = document.getElementById("screen");
 
-    // After 5 seconds, enable scrolling again
-    const timeout = setTimeout(() => {
-      const loadingScreen = document.getElementById("loading-screen");
+    if (screen) {
+      screen.style.maxHeight = "100vh";
+      screen.style.overflow = "hidden";
 
-      if (loadingScreen) {
-        loadingScreen.style.display = "none";
-      }
+      document.body.scrollTo(0, 0);
+      window.history.scrollRestoration = "manual";
 
-      document.body.style.overflow = "auto";
-    }, 5000);
+      // After 5 seconds, enable scrolling again
+      const timeout = setTimeout(() => {
+        const loadingScreen = document.getElementById("loading-screen");
 
-    // Clean up the timeout when the component unmounts
-    return () => clearTimeout(timeout);
+        if (loadingScreen) {
+          loadingScreen.style.display = "none";
+        }
+
+        screen.style.maxHeight = "";
+        screen.style.overflow = "auto";
+      }, 5000);
+
+      // Clean up the timeout when the component unmounts
+      return () => clearTimeout(timeout);
+    }
   }, []);
 
   useEffect(() => {
@@ -47,13 +54,12 @@ export default function Page() {
 
       if (navbar && heroSection && aboutSection) {
         const navbarHeight = navbar.offsetHeight;
-        const heroHeight = heroSection.offsetHeight;
 
         const currentScrollPosition = window.scrollY;
 
         // Only allow scroll action if not currently scrolling
         if (isScrolling) return;
-        
+
         if (currentScrollPosition < navbarHeight) {
           setIsOutsideHero(false);
 
@@ -106,7 +112,7 @@ export default function Page() {
   }, [isScrolling]);
 
   return (
-    <>
+    <div id="screen">
       <LoadingScreen />
       <Navbar {...{isOutsideHero}}  />
       <Hero />
@@ -116,6 +122,6 @@ export default function Page() {
       <OurService />
       <OurTeam />
       <Footer />
-    </>
+    </div>
   );
 }

@@ -55,7 +55,7 @@ export default function OurTeam() {
                 <div className="flex gap-2 items-center cursor-pointer" onClick={() => window.open(`mailto:${data.email}`)}>
                   <EmailIcon color="#3C69D4" className="size-[16px] rounded-md" />
 
-                  <div className="text-[16px] text-[#334155] font-inter font-[400] leading-[150%] tracking-[5%]">
+                  <div className="text-[16px] text-[#334155] font-[400] leading-[150%] tracking-[5%]">
                     {data.email}
                   </div>
                 </div>
