@@ -1,9 +1,10 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 
 // ** Components
 import Navbar from "@/components/shared/navbar";
 import Footer from "@/components/shared/footer";
+import LoadingScreen from "@/components/shared/loading-screen";
 import Hero from "./_components/hero";
 import About from "./_components/about";
 import PropertyType from "./_components/property-type";
@@ -16,6 +17,20 @@ export default function Page() {
 
   const [isScrolling, setIsScrolling] = useState<boolean>(false);
   const [isOutsideHero, setIsOutsideHero] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Disable scrolling when the component mounts
+    document.body.style.overflow = "hidden";
+
+    // After 5 seconds, enable scrolling again
+    const timeout = setTimeout(() => {
+      document.body.style.overflow = "auto";
+      document.getElementById("loading-screen")?.remove();
+    }, 5000);
+
+    // Clean up the timeout when the component unmounts
+    return () => clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     const checkScroll = () => {
@@ -85,6 +100,7 @@ export default function Page() {
 
   return (
     <>
+      <LoadingScreen />
       <Navbar {...{isOutsideHero}}  />
       <Hero />
       <About />

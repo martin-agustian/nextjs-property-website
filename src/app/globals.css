@@ -108,6 +108,30 @@
   animation-delay: 3s;
 }
 
+.loading-screen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+}
+.loading-screen [id^="segment-"] {
+  opacity: 0;
+  animation: fadeInOpacity 1s ease-in 0s 1;
+  animation-fill-mode: forwards;
+}
+.loading-screen #segment-2 {
+  animation-delay: 1s;
+}
+.loading-screen #segment-3 {
+  animation-delay: 2s;
+}
+.loading-screen #segment-4 {
+  animation-delay: 3s;
+}
+.loading-screen #segment-5 {
+  animation-delay: 4s;
+}
+
 @keyframes slideToRight {
   0% {
     transform: translateX(-100%);
