@@ -70,7 +70,7 @@ function ServiceAccordion({
         <div className="flex-[1.5] hidden md:block">
           {children}
         </div>
-        <button className="flex-none flex items-center justify-center bg-mariner size-[36px] lg:size-[40px] lg:min-w-[40px] rounded-full">
+        <button className="flex-none flex items-center justify-center bg-mariner size-[36px] lg:size-[40px] lg:min-w-[40px] rounded-full cursor-pointer">
           <ArrowIcon color="white" className={`h-[12px] w-[16px] ${isActive ? "rotate-0" : "rotate-180"}`} />
         </button>
       </div>
