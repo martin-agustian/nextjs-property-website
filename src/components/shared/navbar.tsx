@@ -3,17 +3,17 @@ import BurgerIcon from "../icons/burger-icon";
 
 export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
   const menuData = [
-    "about", "our service", "our properties"
+    "about", "our services", "our properties"
   ]; 
 
   return (
     <nav id="navbar" className={`fixed top-0 inset-x-0 z-40 ${isOutsideHero ? "text-black bg-white shadow-md" : "text-white bg-transparent"}`}>
       <div className="container flex justify-between items-center py-3">
         <div className="flex items-center gap-14">
-          <div className="text-[37px] font-[600] cursor-pointer hover:text-dark-pastel-blue">
+          <div className="text-[37.2px] font-[600] leading-[44.64px] tracking-[-3%] cursor-pointer hover:text-dark-pastel-blue">
             Dwell
           </div>
-          <ul className="hidden lg:flex gap-8 text-[14px] font-manrope font-[700]">
+          <ul className="hidden lg:flex gap-8 text-[14px] font-manrope font-[700] leading-[20px] tracking-[4%]">
             {menuData.map((data, i) => {
               return (<li key={i} className="uppercase border-b border-transparent cursor-pointer hover:border-current">{data}</li>)
             })}
@@ -21,7 +21,7 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
         </div>
 
         <ButtonPill 
-          className={`hidden lg:flex h-[45px] ${isOutsideHero ? "bg-cobalt" : "bg-[#FFFFFF1A]"} pr-5`}
+          className={`hidden lg:flex h-[45px] min-w-[150px] ${isOutsideHero ? "bg-cobalt" : "bg-[#FFFFFF1A]"} pr-5`}
           textClassName="text-white"
         >
           Contact Us

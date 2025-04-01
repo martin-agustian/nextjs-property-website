@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-30 text-white">
         <div className="container min-h-screen flex flex-col py-10">
           <div className="flex justify-between items-center mt-auto">
-            <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%]">
+            <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[80px] font-[700] leading-[110%] tracking-[-2%]">
               Find your next <br /> property <span className="text-dark-pastel-blue">with us</span>
             </div>
             <div id="segment-2" className="transform-[translateX(100%)] hidden lg:flex items-center gap-2 rotate-[-90deg]">

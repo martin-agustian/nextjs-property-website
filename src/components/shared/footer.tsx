@@ -36,15 +36,15 @@ export default function Footer() {
 
           <ul className="md:flex-2 flex flex-col items-center md:items-start gap-3 text-[14px] font-[500] leading-[150%] order-3 md:order-2">
             <li className="flex items-center gap-3 capitalize cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('geo:0,0?q=118+Maréchal+Street,+1000+Brussels')}>
-              <MapPinIcon color="#72A5E8" className="size-[16px]" />
+              <MapPinIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
               118 Maréchal Street, 1000 Brussels
             </li>
             <li className="flex gap-3 cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('tel:+32460255201')}>
-              <PhoneIcon color="#72A5E8" className="size-[16px]" />
+              <PhoneIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
               +3 24 60 25 52 01
             </li>
             <li className="flex gap-3 cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('mailto:contact@dwell.be')}>
-              <EmailIcon color="#72A5E8" className="size-[16px]" />
+              <EmailIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
               contact@dwell.be
             </li>
           </ul>

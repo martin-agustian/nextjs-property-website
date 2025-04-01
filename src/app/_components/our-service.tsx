@@ -4,6 +4,7 @@ import Image from "next/image";
 import Label from "@/components/ui/label";
 import Title from "@/components/ui/title";
 import Section from "@/components/ui/section";
+import ButtonPill from "@/components/ui/button-pill";
 import ArrowIcon from "@/components/icons/arrow-icon";
 
 import BuildingImage from "@/assets/images/building.png";
@@ -16,15 +17,27 @@ export default function OurService() {
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
+  const DiscoverAllButton = ({ id, dotId, className } : { id?: string, dotId?: string, className?: string }) => {
+    return (
+      <ButtonPill id={id} dotId={dotId} className={`h-[48px] md:h-[52px] w-[247px] md:w-[255px] bg-cobalt leading-[20px] ${className}`} textClassName={`text-white`}>
+        Discover Our Services
+      </ButtonPill>
+    )
+  }
+
   return (
     <Section id="our-service" className="container py-10" animationClass="our-service">
       <Label>Our Services</Label>
-      <Title className="mt-3">Real estate services tailored to every need</Title>
+
+      <div className="flex items-end justify-between mt-3">
+        <Title>Real estate services <br/> tailored to every need</Title>
+        <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 hidden lg:flex" />
+      </div>
 
       <div className="flex flex-col mt-10">
         {serviceData.map((data, i) => (
           <ServiceAccordion 
-            id={`segment-${i + 1}`} key={i} 
+            id={`segment-2-${i + 1}`} key={i} 
             className="opacity-0"
             isActive={activeIndex === i}
             number={(i+1).toString().padStart(2, "0")} 
@@ -46,6 +59,8 @@ export default function OurService() {
           </ServiceAccordion>
         ))}
       </div>
+
+      <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 flex lg:hidden mx-auto mt-10" />
     </Section>
   );
 }

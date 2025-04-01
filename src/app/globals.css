@@ -123,17 +123,24 @@
   animation-fill-mode: forwards;
 }
 
-.our-service [id^="segment-"] {
+.our-service #segment-1 {
+  animation: fadeInOpacity 1s ease-in 1s 1;
+  animation-fill-mode: forwards;
+}
+.our-service #segment-1-1 {
+  animation: ping 1s ease-in 2s 3;
+}
+.our-service [id^="segment-2-"] {
   animation: fadeInOpacity 1s ease-in 0s 1;
   animation-fill-mode: forwards;
 }
-.our-service #segment-2 {
+.our-service #segment-2-2 {
   animation-delay: 1s;
 }
-.our-service #segment-3 {
+.our-service #segment-2-3 {
   animation-delay: 2s;
 }
-.our-service #segment-4 {
+.our-service #segment-2-4 {
   animation-delay: 3s;
 }
 
@@ -171,10 +178,10 @@
 }
 @keyframes slideToLeft {
   0% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
 }
 @keyframes slideToDownScrollHero {
