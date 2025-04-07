@@ -98,7 +98,7 @@ export default function Page() {
         const navbar = document.getElementById("navbar");
         const aboutSection = document.getElementById("about");
 
-        if (aboutSection && navbar && window.scrollY === aboutSection.offsetTop - navbar.offsetHeight) {
+        if ((aboutSection && navbar) && window.scrollY >= (aboutSection.offsetTop - navbar.offsetHeight - 1)) {
           setIsScrolling(false); // Scroll has finished
         }
       }
