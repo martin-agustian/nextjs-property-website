@@ -57,9 +57,9 @@ export default function PropertyType() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center min-h-[48px] min-w-[48px] lg:min-w-[56px]">
+              <div className="flex items-center justify-center min-h-[48px] min-w-[48px]">
                 <div className="flex items-center justify-center min-h-[24px] min-w-[24px]">
-                  <GotoIcon color="black" className="min-h-[10px] h-[10px] min-w-[10px] w-[10px]" />
+                  <GotoIcon color="black" className="min-h-[10px] h-[10px] xl:h-[12px] min-w-[10px] w-[10px] xl:w-[12px]" />
                 </div>
               </div>
             </li>
