@@ -8,12 +8,12 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
 
   return (
     <nav id="navbar" className={`fixed top-0 inset-x-0 z-40 ${isOutsideHero ? "text-black bg-white shadow-md" : "text-white bg-transparent"}`}>
-      <div className="container flex justify-between items-center py-3">
-        <div className="flex items-center gap-14">
-          <div className="text-[37.2px] font-[600] leading-[44.64px] tracking-[-3%] cursor-pointer hover:text-dark-pastel-blue">
+      <div className="container flex justify-between items-center py-[27.5px] xl:py-[34px]">
+        <div className="flex items-center gap-[56px]">
+          <div className="text-[30px] lg:text-[37.2px] font-[600] leading-[36px] lg:leading-[44.64px] tracking-[-3%] cursor-pointer hover:text-dark-pastel-blue">
             Dwell
           </div>
-          <ul className="hidden lg:flex gap-8 text-[14px] font-manrope font-[700] leading-[20px] tracking-[4%]">
+          <ul className="hidden lg:flex gap-[32px] text-[14px] font-manrope font-[700] leading-[20px] tracking-[4%]">
             {menuData.map((data, i) => {
               return (<li key={i} className="uppercase border-b border-transparent cursor-pointer hover:border-current">{data}</li>)
             })}
@@ -21,13 +21,13 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
         </div>
 
         <ButtonPill 
-          className={`hidden lg:flex h-[45px] min-w-[150px] ${isOutsideHero ? "bg-cobalt" : "bg-[#FFFFFF1A]"} pr-5`}
+          className={`hidden lg:flex h-[52px] ${isOutsideHero ? "bg-cobalt" : "bg-[#FFFFFF1A]"} pl-[24px] pr-[28px]`}
           textClassName="text-white"
         >
           Contact Us
         </ButtonPill>
 
-        <button className="flex lg:hidden items-center justify-center size-[40px] bg-mariner rounded-full">
+        <button className="flex lg:hidden items-center justify-center size-[45px] bg-mariner rounded-full">
           <BurgerIcon color="white" className="size-[20px]" />
         </button>
       </div>
