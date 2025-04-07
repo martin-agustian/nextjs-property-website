@@ -18,10 +18,12 @@ export default function PropertyType() {
     },
     {
       label: "apartment",
+      label2: "flat",
       icon: ApartmentIcon,
     },
     {
       label: "commercial",
+      label2: "business",
       icon: CommercialIcon,
     },
     {
@@ -31,25 +33,36 @@ export default function PropertyType() {
   ];
 
   return (
-    <Section id="property-type" className="container py-10 md:py-16" animationClass="property-type">
+    <Section id="property-type" className="container py-[56px] lg:py-[80px]" animationClass="property-type">
       <Label>Our Properties</Label>
 
-      <Title className="mt-3">Types of Properties</Title>
+      <Title className="mt-[8px] lg:mt-[10px]">Types of Properties</Title>
 
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10">
+      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] lg:gap-[14px] mt-[32px] lg:mt-[56px]">
         {typeData.map((type, i) => {
           return (
-            <li id={`segment-${i + 1}`} key={i} className="opacity-0 flex items-center justify-between bg-alice-blue border border-alice-blue rounded-md cursor-pointer hover:border-mariner px-6 py-4">
-              <div className="flex items-center gap-5">
-                <div className="flex items-center justify-center bg-lavender-mist size-[51px] rounded-full">
-                  <Image src={type.icon} alt="Property Types Icon" className="size-[26px]" />
+            <li id={`segment-${i + 1}`} key={i} className="opacity-0 flex gap-[20px] items-center justify-between bg-alice-blue border border-alice-blue rounded-md cursor-pointer hover:border-mariner px-[16px] py-[20px] lg:p-[32px]">
+              <div className="flex items-center gap-[20px]">
+                <div className="flex items-center justify-center min-h-[52px] min-w-[52px] lg:min-h-[71px] lg:min-w-[71px] bg-lavender-mist rounded-full">
+                  <Image src={type.icon} alt="Property Types Icon" className="size-[24px] lg:size-[32px]" />
                 </div>
-                <div className="text-crulean-blue capitalize">
-                  {type.label}
+
+                <div className="text-[24px] lg:text-[28px] font-manrope font-[600] text-crulean-blue leading-[120%] capitalize">
+                  <span className="hidden lg:block">
+                    {type.label}
+                  </span>
+
+                  <span className="block lg:hidden">
+                    {type.label2 ?? type.label}
+                  </span>
                 </div>
               </div>
 
-              <GotoIcon color="black" className="size-[8px]" />
+              <div className="flex items-center justify-center min-h-[48px] min-w-[48px] lg:min-w-[56px]">
+                <div className="flex items-center justify-center min-h-[24px] min-w-[24px]">
+                  <GotoIcon color="black" className="min-h-[10px] h-[10px] min-w-[10px] w-[10px]" />
+                </div>
+              </div>
             </li>
           );
         })}
