@@ -21,7 +21,7 @@ export default function Hero() {
   ];
 
   return (
-    <Section id="hero" className="relative h-screen w-full max-w-full overflow-x-hidden" animationClass="hero">
+    <Section id="hero" className="relative h-screen max-h-[1080px] w-full max-w-full overflow-x-hidden" animationClass="hero">
       <Image src={HeroImage} alt="Hero Image" className="absolute inset-0 h-full w-full object-cover" priority />
 
       <div className="absolute inset-0 z-10 bg-[#00000080]" />
@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-20 bg-linear-to-b from-[#1E284D00] to-[#1E284D99]" />
       
       <div className="absolute inset-0 z-30 text-white">
-        <div className="container min-h-screen flex flex-col py-10">
+        <div className="container h-screen max-h-[1080px] flex flex-col py-10">
           <div className="flex justify-between items-center mt-auto">
             <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[65px] xl:text-[80px] font-[700] leading-[120%] xl:leading-[110%] tracking-[0%] xl:tracking-[-2%]">
               Find your next <br /> property <span className="text-dark-pastel-blue">with us</span>
