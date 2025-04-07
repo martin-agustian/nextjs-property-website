@@ -72,6 +72,16 @@ export default function NewArrival() {
       bedroom: 1,
       bathroom: 1,
     },
+    {
+      type: "rent",
+      image: Property2Image,
+      title: "35m² studio",
+      address: "47 Avenue des Tulipes, 1000, Brussels",
+      price: "€550/month",
+      area: "35m²",
+      bedroom: 1,
+      bathroom: 1,
+    },
   ];
 
   const swiperRef = useRef<SwiperClass>(null);
@@ -86,70 +96,84 @@ export default function NewArrival() {
 
   const DiscoverAllButton = ({ id, dotId, className } : { id?: string, dotId?: string, className?: string }) => {
     return (
-      <ButtonPill id={id} dotId={dotId} className={`h-[48px] border-[1.5px] border-tropical-blue ${className}`} dotClassName="bg-crulean-blue">
+      <ButtonPill id={id} dotId={dotId} className={`h-[48px] text-crulean-blue border-[1.5px] border-tropical-blue ${className}`} dotClassName="!bg-crulean-blue">
         Discover all our properties
       </ButtonPill>
     )
   }
 
   return (
-    <Section id="new-arrival" className="container" animationClass="new-arrival">
-      <Label>our new arrivals</Label>
-      
-      <div className="flex items-center justify-between mt-3">
-        <Title>Discover our new arrivals</Title>
-        <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 hidden lg:flex" />
+    <Section id="new-arrival" animationClass="new-arrival">
+      <div className="container">
+        <Label>our new arrivals</Label>
+        
+        <div className="flex items-center justify-between">
+          <Title>Discover our new arrivals</Title>
+          <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="hidden lg:flex" />
+        </div>
       </div>
 
-      <div id="segment-2" className="opacity-0 relative">
-        <Swiper
-          className="relative mt-10"
-          onInit={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          breakpoints={{
-            768: {
-              spaceBetween: 15,
-              slidesPerView: 1.7,
-            },
-            1024: {
-              spaceBetween: 15,
-              slidesPerView: 1.9,
-            },
-            1280: {
-              spaceBetween: 15,
-              slidesPerView: 2.3,
-            },
-          }}
-          spaceBetween={10}
-          slidesPerView={1.1}
-          modules={[Autoplay]}
-          autoplay={{ 
-            delay: 3000, 
-            disableOnInteraction: true 
-          }}
-          loop={true}
-        >
-          {newArrivalData.map((data, i) => (
-            <SwiperSlide key={i} className="cursor-pointer">
-              <Card data={data} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div id="segment-2" className="container opacity-0 pr-0 mt-[32px] lg:mt-[56px]">
+        <div className="relative">
+          <Swiper
+            className="relative"
+            onInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            breakpoints={{
+              389: {
+                spaceBetween: 20,
+                slidesPerView: 1.1,
+              },
+              768: {
+                spaceBetween: 15,
+                slidesPerView: 1.7,
+              },
+              1024: {
+                spaceBetween: 15,
+                slidesPerView: 2.1,
+              },
+              1280: {
+                spaceBetween: 15,
+                slidesPerView: 2.3,
+              },
+              1440: {
+                spaceBetween: 20,
+                slidesPerView: 2.2,
+              },
+            }}
+            spaceBetween={10}
+            slidesPerView={1.1}
+            modules={[Autoplay]}
+            autoplay={{ 
+              delay: 3000, 
+              disableOnInteraction: true 
+            }}
+            loop={true}
+          >
+            {newArrivalData.map((data, i) => (
+              <SwiperSlide key={i} className="min-[390px]:min-w-[344px] max-w-[617px] cursor-pointer">
+                <Card data={data} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        <SwiperButton 
-          className="left-[-20px] swiper-nav-prev pr-1" 
-          iconClassName="rotate-270" 
-          onClick={() => { swiperRef.current?.slidePrev(); }} 
-        />
-        <SwiperButton 
-          className="right-[-20px] swiper-nav-next pl-1" 
-          iconClassName="rotate-90" 
-          onClick={() => { swiperRef.current?.slideNext(); }} 
-        />
+          <SwiperButton 
+            className="left-[-20px] swiper-nav-prev pr-1" 
+            iconClassName="rotate-270" 
+            onClick={() => { swiperRef.current?.slidePrev(); }} 
+          />
+          <SwiperButton 
+            className="right-[8px] xl:right-[20px] swiper-nav-next pl-1" 
+            iconClassName="rotate-90" 
+            onClick={() => { swiperRef.current?.slideNext(); }} 
+          />
+        </div>
       </div>
 
-      <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 flex lg:hidden mx-auto mt-10" />
+      <div className="container">
+        <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="flex lg:hidden mx-auto mt-[56px]" />
+      </div>
     </Section>
   );
 }
@@ -157,27 +181,27 @@ export default function NewArrival() {
 function Card({ data }: { data: NewArrivalData }) {
   return (
     <>
-      <div className="inline-block relative h-[352px] w-full rounded-md">
+      <div className="inline-block relative h-[361px] lg:h-[392px] w-full rounded-md">
         <Image src={data.image} alt="Property Image" className="h-full w-full object-cover rounded-md" priority />
 
         <div className="absolute inset-0 z-20 bg-linear-to-b from-[#1E284D00] to-[#1E284D99] rounded-md" />
 
         <div className="absolute inset-0 z-30">
-          <div className="flex flex-col h-full p-4">
+          <div className="flex flex-col h-full p-[20px] min-[390px]:p-[24px]">
             <div className="flex justify-between">
-              <div className="h-[34px] w-[88px] flex items-center justify-center bg-[#FFFFFF1A] rounded-full">
+              <div className="h-[34px] w-[88px] flex items-center justify-center bg-[##FFFFFF1A] backdrop-blur-[16px] rounded-full">
                 <div className="text-[12px] text-white font-manrope font-[800] leading-[150%] tracking-[5%] uppercase">
                   for {data.type}
                 </div>
               </div>
 
-              <Image src={GradeImage} alt="Grade" className="h-[26px] w-[92px]" />
+              <Image src={GradeImage} alt="Grade" className="h-[26px] w-[92.7px]" />
             </div>
 
-            <div className="flex gap-5 lg:gap-0 flex-col lg:flex-row lg:justify-between mt-auto">
-              <CardBottomLabel label="price" data={data.price} dataClass="text-[24px]" />
+            <div className="flex gap-[24px] xl:gap-0 flex-col xl:flex-row lg:justify-between mt-auto">
+              <CardBottomLabel label="price" data={data.price} dataClass="text-[24px] font-manrope leading-[120%]" />
 
-              <div className="flex gap-3 lg:gap-5">
+              <div className="flex gap-[12px] min-[390px]:gap-[24px]">
                 <CardBottomLabel label="area" data={data.area} />
                 <CardBottomDivider />
                 <CardBottomLabel label="bedrooms" data={data.bedroom} />                
@@ -189,19 +213,23 @@ function Card({ data }: { data: NewArrivalData }) {
         </div>
       </div>
 
-      <div className="text-[12px] text-mariner font-manrope font-[800] leading-[150%] tracking-[5%] uppercase mt-3">
-        for {data.type}
-      </div>
+      <div className="flex flex-col gap-[15.5px] lg:gap-[20px] p-[15px] min-[390px]:p-[24px] pb-0">
+        <div className="flex flex-col gap-[2px]">
+          <div className="text-[12px] text-mariner font-manrope font-[800] leading-[150%] tracking-[5%] uppercase">
+            for {data.type}
+          </div>
 
-      <div className="text-[24px] font-manrope font-[500] leading-[120%]">
-        {data.title}
-      </div>
+          <div className="text-[20px] md:text-[24px] font-manrope font-[500] leading-[120%]">
+            {data.title}
+          </div>
+        </div>
 
-      <div className="flex gap-2 items-start mt-3">
-        <MapPinIcon color="#3356C2" className="size-[16px] md:size-[20px] mt-[2px]" />
+        <div className="flex gap-[8px] items-start">
+          <MapPinIcon color="#3356C2" className="size-[16px] md:size-[20px] mt-[2px]" />
 
-        <div className="text-[14px] md:text-[16px] text-crulean-blue font-[400] md:font-[500] leading-[150%]">
-          {data.address}
+          <div className="text-[14px] md:text-[16px] text-crulean-blue font-[400] md:font-[500] leading-[150%]">
+            {data.address}
+          </div>
         </div>
       </div>
     </>
@@ -215,11 +243,11 @@ function CardBottomLabel({
 }) {
 
   return (
-    <div className={`flex flex-col gap-3 ${className}`}>
+    <div className={`flex flex-col gap-[6px] ${className}`}>
       <div className={`text-[12px] text-tropical-blue font-manrope font-[800] leading-[150%] tracking-[5%] uppercase ${labelClass}`}>
         {label}
       </div>
-      <div className={`text-[16px] text-white font-[600] leading-[90%] ${dataClass}`}>
+      <div className={`text-[16px] text-white font-[600] leading-[150%] ${dataClass}`}>
         {data}
       </div>
     </div>

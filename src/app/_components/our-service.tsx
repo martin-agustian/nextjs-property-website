@@ -19,7 +19,7 @@ export default function OurService() {
 
   const DiscoverAllButton = ({ id, dotId, className } : { id?: string, dotId?: string, className?: string }) => {
     return (
-      <ButtonPill id={id} dotId={dotId} className={`h-[48px] md:h-[52px] w-[247px] md:w-[255px] bg-cobalt leading-[20px] ${className}`} textClassName={`text-white`}>
+      <ButtonPill id={id} dotId={dotId} className={`h-[48px] md:h-[52px] w-[231px] md:w-[239px] bg-cobalt ${className}`} textClassName={`text-white`}>
         Discover our services
       </ButtonPill>
     )
@@ -73,8 +73,8 @@ function ServiceAccordion({
 }) {
   return (
     <div id={id} className={`flex flex-col border-b-2 ${isActive ? "border-dark-pastel-blue" : "border-lavender-mist"} ${className}`}>
-      <div className={`flex items-center ${isActive && "lg:items-start"} lg:gap-[48px] group py-[32px] lg:p-[32px] xl:p-[40px]`} onClick={onClick}>
-        <div className="flex-1 flex items-center justify-start gap-[22px] cursor-pointer">
+      <div className={`flex items-center ${isActive && "lg:items-start"} lg:gap-[48px] group py-[32px] lg:p-[32px] xl:p-[40px] cursor-pointer`} onClick={onClick}>
+        <div className="flex-1 flex items-center justify-start gap-[22px]">
           <div className={`flex-none lg:flex-1 text-[12px] ${isActive ? "text-river-bed" : "text-iron"} group-hover:text-river-bed font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
             {number}
           </div>
