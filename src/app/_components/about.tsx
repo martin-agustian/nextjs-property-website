@@ -9,9 +9,9 @@ import MeetingImage from "@/assets/images/meeting.png";
 export default function About() {
   return (
     <Section id="about" className="bg-alice-blue" animationClass="about">
-      <div className="container flex flex-col lg:flex-row gap-[40px] xl:gap-[112px] items-center xl:pr-[112px]">
-        <div id="segment-1" className="opacity-0 w-full lg:min-w-[454px] lg:w-[454px] xl:min-w-[609px] xl:w-[609px]">
-          <Image src={MeetingImage} alt="Meeting Ilustration" className="h-[283px] md:h-[465px] w-full object-cover rounded-md" />
+      <div className="container flex flex-col lg:flex-row gap-[40px] lg:gap-[30px] xl:gap-[112px] items-center xl:pr-[112px]">
+        <div id="segment-1" className="opacity-0 w-full lg:min-w-[464px] lg:w-[464px] xl:min-w-[609px] xl:w-[609px]">
+          <Image src={MeetingImage} alt="Meeting Ilustration" className="h-[283px] md:h-[405px] xl:h-[465px] w-full object-cover rounded-md" />
         </div>
 
         <div id="segment-2" className="block">

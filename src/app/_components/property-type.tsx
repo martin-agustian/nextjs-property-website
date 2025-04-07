@@ -40,10 +40,10 @@ export default function PropertyType() {
       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] lg:gap-[14px] mt-[32px] lg:mt-[56px]">
         {typeData.map((type, i) => {
           return (
-            <li id={`segment-${i + 1}`} key={i} className="opacity-0 flex gap-[20px] items-center justify-between bg-alice-blue border border-alice-blue rounded-md cursor-pointer hover:border-mariner px-[16px] py-[20px] lg:p-[32px]">
+            <li id={`segment-${i + 1}`} key={i} className="opacity-0 flex gap-[20px] items-center justify-between bg-alice-blue border border-alice-blue rounded-md cursor-pointer hover:border-mariner px-[16px] py-[20px] md:p-[26px] xl:p-[32px]">
               <div className="flex items-center gap-[20px]">
-                <div className="flex items-center justify-center min-h-[52px] min-w-[52px] lg:min-h-[71px] lg:min-w-[71px] bg-lavender-mist rounded-full">
-                  <Image src={type.icon} alt="Property Types Icon" className="size-[24px] lg:size-[32px]" />
+                <div className="flex items-center justify-center min-h-[52px] min-w-[52px] md:min-h-[61px] md:min-w-[61px] xl:min-h-[71px] xl:min-w-[71px] bg-lavender-mist rounded-full">
+                  <Image src={type.icon} alt="Property Types Icon" className="size-[24px] md:size-[28px] xl:size-[32px]" />
                 </div>
 
                 <div className="text-[24px] xl:text-[28px] font-manrope font-[600] text-crulean-blue leading-[120%] capitalize">
