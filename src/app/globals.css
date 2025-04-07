@@ -73,7 +73,7 @@
   }
 }
 
-.section:not(:first-child) {
+.section:not(.hero) {
   padding-top: 56px;
   padding-bottom: 56px;
 
@@ -140,6 +140,9 @@
 .new-arrival #segment-2 {
   animation: fadeInOpacity 1s ease-in 0s 1;
   animation-fill-mode: forwards;
+}
+.new-arrival .linear-gradient {
+  background: linear-gradient(to bottom, rgba(30, 40, 77, 0) 0%, rgba(30, 40, 77, 0.8) 100%);
 }
 
 .our-service #segment-1 {

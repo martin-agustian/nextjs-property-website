@@ -96,7 +96,7 @@ export default function NewArrival() {
 
   const DiscoverAllButton = ({ id, dotId, className } : { id?: string, dotId?: string, className?: string }) => {
     return (
-      <ButtonPill id={id} dotId={dotId} className={`h-[48px] text-crulean-blue border-[1.5px] border-tropical-blue ${className}`} dotClassName="!bg-crulean-blue">
+      <ButtonPill id={id} dotId={dotId} className={`opacity-0 h-[44px] md:h-[48px] text-crulean-blue border-[1.5px] border-tropical-blue !pl-[18px] !pr-[20px] ${className}`} dotClassName="!bg-crulean-blue">
         Discover all our properties
       </ButtonPill>
     )
@@ -184,7 +184,7 @@ function Card({ data }: { data: NewArrivalData }) {
       <div className="inline-block relative h-[361px] lg:h-[392px] w-full rounded-md">
         <Image src={data.image} alt="Property Image" className="h-full w-full object-cover rounded-md" priority />
 
-        <div className="absolute inset-0 z-20 bg-linear-to-b from-[#1E284D00] to-[#1E284D99] rounded-md" />
+        <div className="absolute inset-0 z-20 linear-gradient rounded-md" />
 
         <div className="absolute inset-0 z-30">
           <div className="flex flex-col h-full p-[20px] min-[390px]:p-[24px]">

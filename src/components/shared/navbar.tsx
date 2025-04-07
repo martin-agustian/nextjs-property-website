@@ -7,8 +7,8 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
   ]; 
 
   return (
-    <nav id="navbar" className={`fixed top-0 inset-x-0 z-40 ${isOutsideHero ? "text-black bg-white shadow-md" : "text-white bg-transparent"}`}>
-      <div className="container flex justify-between items-center py-[27.5px] xl:py-[34px]">
+    <nav id="navbar" className={`inset-x-0 z-40 py-[25px] ${isOutsideHero ? "fixed top-0 text-black bg-white shadow-md" : "absolute top-[2.5px] xl:top-[9px] text-white bg-transparent"}`}>
+      <div className="container flex justify-between items-center">
         <div className="flex items-center gap-[56px]">
           <div className="text-[30px] lg:text-[37.2px] font-[600] leading-[36px] lg:leading-[44.64px] tracking-[-3%] cursor-pointer hover:text-dark-pastel-blue">
             Dwell
@@ -21,7 +21,7 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
         </div>
 
         <ButtonPill 
-          className={`hidden lg:flex h-[52px] ${isOutsideHero ? "bg-cobalt" : "bg-[#FFFFFF1A]"} pl-[24px] pr-[28px]`}
+          className={`hidden lg:flex h-[45px] xl:h-[52px] ${isOutsideHero ? "bg-cobalt" : "bg-[#FFFFFF1A]"} pl-[24px] pr-[28px]`}
           textClassName="text-white"
         >
           Contact Us
