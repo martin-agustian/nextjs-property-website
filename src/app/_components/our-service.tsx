@@ -20,7 +20,7 @@ export default function OurService() {
   const DiscoverAllButton = ({ id, dotId, className } : { id?: string, dotId?: string, className?: string }) => {
     return (
       <ButtonPill id={id} dotId={dotId} className={`h-[48px] md:h-[52px] w-[247px] md:w-[255px] bg-cobalt leading-[20px] ${className}`} textClassName={`text-white`}>
-        Discover Our Services
+        Discover our services
       </ButtonPill>
     )
   }
@@ -29,12 +29,12 @@ export default function OurService() {
     <Section id="our-service" className="container" animationClass="our-service">
       <Label>Our Services</Label>
 
-      <div className="flex items-end justify-between mt-3">
+      <div className="flex items-end justify-between">
         <Title>Real estate services <br/> tailored to every need</Title>
         <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 hidden lg:flex" />
       </div>
 
-      <div className="flex flex-col mt-10">
+      <div className="flex flex-col mt-0 lg:mt-[56px]">
         {serviceData.map((data, i) => (
           <ServiceAccordion 
             id={`segment-2-${i + 1}`} key={i} 
@@ -45,10 +45,10 @@ export default function OurService() {
             onClick={() => { setActiveIndex(i) }}
           >
             {activeIndex === i && (
-              <div className="flex flex-col lg:flex-row gap-3 lg:gap-5">
+              <div className="flex flex-col sm:flex-row sm:gap-[32px] mb-0 sm:mb-[32px] lg:mb-0">
                 <Image src={BuildingImage} alt="Building Image" className="h-[230px] w-full md:w-[216px] md:min-w-[216px] object-cover rounded-md" />
                 
-                <div className="text-[14px] text-pickled-bluewood font-[400] leading-[150%]">
+                <div className="text-[14px] text-pickled-bluewood font-[400] leading-[150%] py-[32px] sm:py-0">
                   Our agency offers you a comprehensive and diverse range of services, 
                   carefully tailored to each stage of your real estate project. 
                   Whether you are a buyer, seller, tenant, investor, or simply seeking informed advice, 
@@ -60,7 +60,7 @@ export default function OurService() {
         ))}
       </div>
 
-      <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 flex lg:hidden mx-auto mt-10" />
+      <DiscoverAllButton id="segment-1" dotId="segment-1-1" className="opacity-0 flex lg:hidden mx-auto mt-[56px]" />
     </Section>
   );
 }
@@ -72,17 +72,17 @@ function ServiceAccordion({
   children?: ReactNode, onClick?: MouseEventHandler
 }) {
   return (
-    <>
-      <div id={id} className={`flex items-start gap-3 md:gap-5 lg:gap-8 group border-b border-dark-pastel-blue py-6 lg:px-3 lg:py-8 cursor-pointer ${className}`} onClick={onClick}>
-        <div className="flex-1 flex items-center justify-start gap-3">
-          <div className={`flex-none md:flex-1 lg:flex-1 text-[12px] ${isActive ? "text-river-bed" : "text-iron"} group-hover:text-river-bed font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
+    <div id={id} className={`flex flex-col border-b-2 ${isActive ? "border-dark-pastel-blue" : "border-lavender-mist"} ${className}`}>
+      <div className={`flex items-center ${isActive && "lg:items-start"} lg:gap-[48px] group py-[32px] lg:p-[32px] xl:p-[40px]`} onClick={onClick}>
+        <div className="flex-1 flex items-center justify-start gap-[22px] cursor-pointer">
+          <div className={`flex-none lg:flex-1 text-[12px] ${isActive ? "text-river-bed" : "text-iron"} group-hover:text-river-bed font-manrope font-[800] leading-[150%] tracking-[5%] uppercase`}>
             {number}
           </div>
-          <div className={`flex-1 md:flex-2 lg:flex-3 text-[24px] ${isActive ? "text-crulean-blue" : "text-cadet-grey"} group-hover:text-crulean-blue font-manrope font-[500] leading-[120%] capitalize`}>
+          <div className={`flex-1 lg:flex-3 text-[24px] ${isActive ? "text-crulean-blue" : "text-cadet-grey"} group-hover:text-crulean-blue font-manrope font-[500] leading-[120%] capitalize`}>
             {name}
           </div>
         </div>
-        <div className="flex-[1.5] hidden md:block">
+        <div className="basis-[482px] xl:basis-[682px] hidden lg:block">
           {children}
         </div>
         <button className="flex-none flex items-center justify-center bg-mariner size-[36px] lg:size-[40px] lg:min-w-[40px] rounded-full cursor-pointer">
@@ -90,9 +90,9 @@ function ServiceAccordion({
         </button>
       </div>
 
-      <div className="flex-2 block md:hidden">
+      <div className="flex-2 block lg:hidden">
         {children}
       </div>
-    </>
+    </div>
   )
 }

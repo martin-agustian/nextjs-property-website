@@ -9,12 +9,12 @@ export default function Footer() {
   return (
     <footer className="section bg-mirage text-white !pb-[24px]">
       <div className="container">
-        <div className="text-[48px] md:text-[37.2px] text-center md:text-left font-[600] leading-[44.64px] tracking-[-3%]">
+        <div className="text-[48px] md:text-[37.2px] text-center sm:text-left font-[600] leading-[44.64px] tracking-[-3%]">
           Dwell
         </div>
 
-        <div className="flex gap-[56px] flex-col lg:flex-row text-center md:text-left mt-[56px]">
-          <div className="md:flex-3 order-1">
+        <div className="flex gap-[56px] flex-col lg:flex-row text-center sm:text-left mt-[56px]">
+          <div className="flex-1 order-1">
             <div className="text-[24px] xl:text-[28px] text-left font-manrope font-[600] leading-[120%]">
               Stay informed about the <br className="block lg:hidden"/> <span className="text-mariner">latest <br className="hidden lg:block" /> property opportunities</span>
             </div>
@@ -34,37 +34,39 @@ export default function Footer() {
             </label>
           </div>
 
-          <ul className="md:flex-2 flex flex-col items-center md:items-start gap-[10px] text-[14px] font-[500] leading-[150%] order-3 md:order-2">
-            <li className="flex items-center lg:items-start gap-[8px] capitalize cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('geo:0,0?q=118+Maréchal+Street,+1000+Brussels')}>
-              <div className="flex items-center justify-center size-[24px]">
-                <MapPinIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
-              </div>
-              118 Maréchal Street, 1000 <br className="hidden lg:block" /> Brussels
-            </li>
-            <li className="flex gap-[8px] cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('tel:+32460255201')}>
-              <div className="flex items-center justify-center size-[24px]">              
-                <PhoneIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
-              </div>
-              +3 24 60 25 52 01
-            </li>
-            <li className="flex gap-[8px] cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('mailto:contact@dwell.be')}>
-              <div className="flex items-center justify-center size-[24px]">                
-                <EmailIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
-              </div>
-              contact@dwell.be
-            </li>
-          </ul>
+          <div className="flex-1 flex flex-col sm:flex-row gap-[56px] order-2">
+            <ul className="sm:flex-2 flex flex-col items-center sm:items-start gap-[10px] text-[14px] font-[500] leading-[150%] order-2 lg:order-1">
+              <li className="flex items-center lg:items-start gap-[8px] capitalize cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('geo:0,0?q=118+Maréchal+Street,+1000+Brussels')}>
+                <div className="flex items-center justify-center size-[24px]">
+                  <MapPinIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
+                </div>
+                118 Maréchal Street, 1000 <br className="hidden lg:block" /> Brussels
+              </li>
+              <li className="flex gap-[8px] cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('tel:+32460255201')}>
+                <div className="flex items-center justify-center size-[24px]">              
+                  <PhoneIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
+                </div>
+                +3 24 60 25 52 01
+              </li>
+              <li className="flex gap-[8px] cursor-pointer hover:text-dark-pastel-blue" onClick={() => window.open('mailto:contact@dwell.be')}>
+                <div className="flex items-center justify-center size-[24px]">                
+                  <EmailIcon color="#72A5E8" className="size-[16px] min-w-[16px] min-h-[16px]" />
+                </div>
+                contact@dwell.be
+              </li>
+            </ul>
 
-          <ul className="md:flex-1 flex flex-col gap-[10px] text-[16px] md:text-[14px] font-[400] leading-[150%] capitalize order-2 md:order-3">
-            <li className="cursor-pointer hover:text-dark-pastel-blue">services</li>
-            <li className="cursor-pointer hover:text-dark-pastel-blue">properties</li>
-            <li className="cursor-pointer hover:text-dark-pastel-blue">contact</li>
-            <li className="cursor-pointer hover:text-dark-pastel-blue">blog</li>
-          </ul>
+            <ul className="sm:flex-1 flex flex-col gap-[10px] text-[16px] md:text-[14px] font-[400] leading-[150%] capitalize order-1 lg:order-2">
+              <li className="cursor-pointer hover:text-dark-pastel-blue">services</li>
+              <li className="cursor-pointer hover:text-dark-pastel-blue">properties</li>
+              <li className="cursor-pointer hover:text-dark-pastel-blue">contact</li>
+              <li className="cursor-pointer hover:text-dark-pastel-blue">blog</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="flex gap-[20px] flex-col md:flex-row md:justify-between items-center text-[12px] text-[#F1F5F9] font-[400] leading-[16px] mt-[40px] md:mt-[100px]">
-          <div className="flex gap-[14px] order-2 md:order-1">
+        <div className="flex gap-[20px] flex-col sm:flex-row sm:justify-between items-center text-[12px] text-[#F1F5F9] font-[400] leading-[16px] mt-[40px] md:mt-[100px]">
+          <div className="flex gap-[14px] order-2 sm:order-1">
             <div className="flex gap-[8px]">
               <div className="cursor-pointer" onClick={() => window.open('https://instagram.com')}>
                 <InstagramIcon color="white" className="size-[14px]" />
@@ -75,7 +77,7 @@ export default function Footer() {
             </div>
             Eazyclick ©2024, all rights reserved
           </div>
-          <div className="flex gap-[12px] order-1 md:order-2">
+          <div className="flex gap-[12px] order-1 sm:order-2">
             <span className="cursor-pointer hover:text-dark-pastel-blue">Terms & Conditions</span>
             <span className="cursor-pointer hover:text-dark-pastel-blue">Privacy Policy</span>
             <span className="cursor-pointer hover:text-dark-pastel-blue">Cookies</span>

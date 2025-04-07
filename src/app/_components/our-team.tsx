@@ -42,11 +42,11 @@ export default function OurTeam() {
 
         <Title>Meet our team of experts</Title>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] lg:gap-[20px] mt-[32px] lg:mt-[56px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] lg:gap-[20px] mt-[32px] lg:mt-[56px]">
           {ourTeamData.map((data, i) => {
             return (
               <div id={`segment-${i + 1}`} key={i} className="opacity-0 flex flex-col gap-[20px] xl:gap-[28px] rounded-md cursor-default">
-                <Image src={data.image} alt="Profile Image" className="h-[256px] md:h-[323px] xl:h-[413px] w-full object-cover rounded-md" />
+                <Image src={data.image} alt="Profile Image" className="h-[256px] md:h-[323px] xl:h-[413px] w-full object-cover sm:object-top rounded-md" />
 
                 <div className="flex flex-col gap-[10px] xl:gap-[24px]">
                   <div className="flex flex-col gap-[6px]">
