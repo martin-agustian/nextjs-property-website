@@ -33,10 +33,10 @@ export default function OurTeam() {
   ]
 
   return (
-    <Section id="our-team" className="bg-alice-blue py-10" animationClass="our-team">
+    <Section id="our-team" className="bg-alice-blue" animationClass="our-team">
       <div className="container">
         <Label>our team</Label>
-        <Title className="mt-3">Meet our team of experts</Title>
+        <Title>Meet our team of experts</Title>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
           {ourTeamData.map((data, i) => {

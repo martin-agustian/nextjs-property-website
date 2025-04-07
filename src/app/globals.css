@@ -60,12 +60,26 @@
   padding-inline: 16px;
   margin-inline: auto;
 
+  @variant md {
+    padding-inline: 58px;
+  }
+
   @variant lg {
     padding-inline: 28px;
   }
 
   @variant xl {
     padding-inline: 56px;
+  }
+}
+
+.section:not(:first-child) {
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  @variant lg {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 

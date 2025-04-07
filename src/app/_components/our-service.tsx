@@ -26,7 +26,7 @@ export default function OurService() {
   }
 
   return (
-    <Section id="our-service" className="container py-10" animationClass="our-service">
+    <Section id="our-service" className="container" animationClass="our-service">
       <Label>Our Services</Label>
 
       <div className="flex items-end justify-between mt-3">

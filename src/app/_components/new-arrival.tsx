@@ -93,7 +93,7 @@ export default function NewArrival() {
   }
 
   return (
-    <Section id="new-arrival" className="container py-10" animationClass="new-arrival">
+    <Section id="new-arrival" className="container" animationClass="new-arrival">
       <Label>our new arrivals</Label>
       
       <div className="flex items-center justify-between mt-3">

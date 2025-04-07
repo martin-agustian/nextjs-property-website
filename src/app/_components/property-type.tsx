@@ -33,10 +33,9 @@ export default function PropertyType() {
   ];
 
   return (
-    <Section id="property-type" className="container py-[56px] lg:py-[80px]" animationClass="property-type">
+    <Section id="property-type" className="container" animationClass="property-type">
       <Label>Our Properties</Label>
-
-      <Title className="mt-[8px] lg:mt-[10px]">Types of Properties</Title>
+      <Title>Types of Properties</Title>
 
       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] lg:gap-[14px] mt-[32px] lg:mt-[56px]">
         {typeData.map((type, i) => {
@@ -47,12 +46,12 @@ export default function PropertyType() {
                   <Image src={type.icon} alt="Property Types Icon" className="size-[24px] lg:size-[32px]" />
                 </div>
 
-                <div className="text-[24px] lg:text-[28px] font-manrope font-[600] text-crulean-blue leading-[120%] capitalize">
-                  <span className="hidden lg:block">
+                <div className="text-[24px] xl:text-[28px] font-manrope font-[600] text-crulean-blue leading-[120%] capitalize">
+                  <span className="hidden xl:block">
                     {type.label}
                   </span>
 
-                  <span className="block lg:hidden">
+                  <span className="block xl:hidden">
                     {type.label2 ?? type.label}
                   </span>
                 </div>
