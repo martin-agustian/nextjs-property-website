@@ -34,7 +34,7 @@ export default function Hero() {
             <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[65px] xl:text-[80px] font-[700] leading-[120%] xl:leading-[110%] tracking-[0%] xl:tracking-[-2%]">
               Find your next <br /> property <span className="text-dark-pastel-blue">with us</span>
             </div>
-            <div id="segment-2" className="scroll transform-[translateY(-100%)] hidden lg:flex items-center gap-2">
+            <div id="segment-2" className="scroll transform-[translateY(-100%)] hidden lg:flex items-center gap-[6px] mb-[12px]">
               <div className="flex h-[80px]">
                 <div className="w-[1px] h-[70%] bg-[#CBD5E14D]" />
                 <div className="w-[1px] h-[30%] bg-alice-blue" />
