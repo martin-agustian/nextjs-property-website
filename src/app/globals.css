@@ -96,6 +96,10 @@
   animation: slideToUp 1s ease-in 0s 1;
   animation-fill-mode: forwards;
 }
+.hero .scroll {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
 
 .about #segment-1 {
   animation: fadeInOpacity 2s ease-out 0s 1;
@@ -208,10 +212,10 @@
 }
 @keyframes slideToDownScrollHero {
   0% {
-    transform: translateX(100%);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 @keyframes slideToUp {

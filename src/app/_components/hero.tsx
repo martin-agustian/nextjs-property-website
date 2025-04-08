@@ -30,17 +30,17 @@ export default function Hero() {
       
       <div className="absolute inset-0 z-30 text-white">
         <div className="container h-screen max-h-[1080px] flex flex-col py-10">
-          <div className="flex justify-between items-center mt-auto">
+          <div className="flex justify-between items-end mt-auto">
             <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[65px] xl:text-[80px] font-[700] leading-[120%] xl:leading-[110%] tracking-[0%] xl:tracking-[-2%]">
               Find your next <br /> property <span className="text-dark-pastel-blue">with us</span>
             </div>
-            <div id="segment-2" className="transform-[translateX(100%)] hidden lg:flex items-center gap-2 rotate-[-90deg]">
-              <div className="text-[10px] leading-[122%] tracking-[5%] uppercase">
-                scroll
+            <div id="segment-2" className="scroll transform-[translateY(-100%)] hidden lg:flex items-center gap-2">
+              <div className="flex h-[80px]">
+                <div className="w-[1px] h-[70%] bg-[#CBD5E14D]" />
+                <div className="w-[1px] h-[30%] bg-alice-blue" />
               </div>
-              <div className="flex w-[50px]">
-                <div className="h-[1px] w-[30%] bg-alice-blue" />
-                <div className="h-[1px] w-[70%] bg-[#CBD5E14D]" />
+              <div className="text-[10px] text-[#F1F6FDCC] leading-[122%] tracking-[5%] uppercase rotate-[180deg]">
+                scroll
               </div>
             </div>
           </div>
