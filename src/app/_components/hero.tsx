@@ -29,8 +29,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-20 bg-linear-to-b from-[#1E284D00] to-[#1E284D99]" />
       
       <div className="absolute inset-0 z-30 text-white">
-        <div className="container h-screen max-h-[1080px] flex flex-col py-[28px] pt-[111px] lg:pb-[56px]">
-          <div className="flex justify-between items-end mt-auto">
+        <div className="container h-screen max-h-[1080px] flex flex-col pb-[28px] pt-[97.5px] lg:pb-[56px] lg:pt-[111px]">
+          <div className="flex justify-between items-end pt-[81px] md:pt-0 xl:pt-[81px] mt-auto">
             <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[60px] xl:text-[80px] font-[700] leading-[120%] xl:leading-[110%] tracking-[0%] xl:tracking-[-2%]">
               Find your next <br /> property <span className="text-dark-pastel-blue">with us</span>
             </div>
@@ -61,7 +61,7 @@ export default function Hero() {
                   slidesPerView: 3,
                 },
               }}
-              wrapperClass="justify-end"
+              wrapperClass="lg:justify-end"
               spaceBetween={15}
               slidesPerView={1.1}
             >
