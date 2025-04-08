@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+// import { Autoplay } from "swiper/modules";
 
 // ** Components
 import Image from "next/image";
