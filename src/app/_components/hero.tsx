@@ -56,6 +56,10 @@ export default function Hero() {
                   spaceBetween: 15,
                   slidesPerView: 3,
                 },
+                1440: {
+                  spaceBetween: 24,
+                  slidesPerView: 3,
+                },
               }}
               spaceBetween={15}
               slidesPerView={1.1}

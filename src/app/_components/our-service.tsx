@@ -13,7 +13,7 @@ import BuildingImage from "@/assets/images/building.png";
 import type { MouseEventHandler, ReactNode } from "react";
 
 export default function OurService() {
-  const serviceData = ["sales", "property management", "valuation", "legal advice"];
+  const serviceData = ["sale", "property management", "valuation", "legal advice"];
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
