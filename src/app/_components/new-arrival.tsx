@@ -144,11 +144,11 @@ export default function NewArrival() {
             }}
             spaceBetween={10}
             slidesPerView={1.1}
-            modules={[Autoplay]}
-            autoplay={{ 
-              delay: 3000, 
-              disableOnInteraction: true 
-            }}
+            // modules={[Autoplay]}
+            // autoplay={{ 
+            //   delay: 0, 
+            //   disableOnInteraction: true 
+            // }}
             loop={true}
           >
             {newArrivalData.map((data, i) => (
