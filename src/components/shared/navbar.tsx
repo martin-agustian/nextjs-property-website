@@ -10,7 +10,7 @@ export default function Navbar({ isOutsideHero }: { isOutsideHero: boolean }) {
     <nav id="navbar" className={`inset-x-0 z-40 py-[25px] ${isOutsideHero ? "fixed top-0 text-black bg-white shadow-md" : "absolute top-[2.5px] xl:top-[9px] text-white bg-transparent"}`}>
       <div className="container flex justify-between items-center">
         <div className="flex items-center gap-[56px]">
-          <div className="text-[30px] lg:text-[37.2px] font-[600] leading-[36px] lg:leading-[44.64px] tracking-[-3%] cursor-pointer hover:text-dark-pastel-blue">
+          <div className="text-[30px] md:text-[35px] lg:text-[37.2px] font-[600] leading-[36px] lg:leading-[44.64px] tracking-[-3%] cursor-pointer hover:text-dark-pastel-blue">
             Dwell
           </div>
           <ul className="hidden lg:flex gap-[32px] text-[14px] font-manrope font-[700] leading-[20px] tracking-[4%]">
