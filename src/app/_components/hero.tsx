@@ -65,12 +65,12 @@ export default function Hero() {
               slidesPerView={1.1}
             >
               {sectionHeroData.map((data, i) => (
-                <SwiperSlide key={i}>
+                <SwiperSlide key={i} className="max-w-[320px]">
                   <div key={i} className="flex flex-col gap-[12px] min-w-fit md:min-w-auto border-t border-[#FFFFFF33] pt-[20px]">
                     <div className="text-[20px] xl:text-[24px] font-manrope font-[500] leading-[120%]">
                       {data.title}
                     </div>
-                    <div className="text-[14px] font-[400] leading-[150%]">
+                    <div className="max-w-[300px] lg:max-w-[288px] text-[14px] font-[400] leading-[150%]">
                       {data.description}
                     </div>
                   </div>
