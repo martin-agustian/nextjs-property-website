@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-20 bg-linear-to-b from-[#1E284D00] to-[#1E284D99]" />
       
       <div className="absolute inset-0 z-30 text-white">
-        <div className="container h-screen max-h-[1080px] flex flex-col py-[28px] lg:py-[56px]">
+        <div className="container h-screen max-h-[1080px] flex flex-col py-[28px] pt-[111px] lg:pb-[56px]">
           <div className="flex justify-between items-end mt-auto">
             <div id="segment-1" className="-translate-x-full font-manrope text-[48px] md:text-[60px] xl:text-[80px] font-[700] leading-[120%] xl:leading-[110%] tracking-[0%] xl:tracking-[-2%]">
               Find your next <br /> property <span className="text-dark-pastel-blue">with us</span>
@@ -61,11 +61,12 @@ export default function Hero() {
                   slidesPerView: 3,
                 },
               }}
+              wrapperClass="justify-end"
               spaceBetween={15}
               slidesPerView={1.1}
             >
               {sectionHeroData.map((data, i) => (
-                <SwiperSlide key={i} className="max-w-[320px]">
+                <SwiperSlide key={i} className={`max-w-[320px] ${i === sectionHeroData.length - 1 && "!mr-0"}`}>
                   <div key={i} className="flex flex-col gap-[12px] min-w-fit md:min-w-auto border-t border-[#FFFFFF33] pt-[20px]">
                     <div className="text-[20px] xl:text-[24px] font-manrope font-[500] leading-[120%]">
                       {data.title}
