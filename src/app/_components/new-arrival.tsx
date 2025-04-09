@@ -213,7 +213,7 @@ function Card({ data }: { data: NewArrivalData }) {
         </div>
       </div>
 
-      <div className="flex flex-col gap-[15.5px] lg:gap-[20px] p-[15px] min-[390px]:p-[24px] pb-0">
+      <div className="flex flex-col gap-[15.5px] lg:gap-[20px] p-[15px] min-[390px]:p-[24px] !pb-0">
         <div className="flex flex-col gap-[2px]">
           <div className="text-[12px] text-mariner font-manrope font-[800] leading-[150%] tracking-[5%] uppercase">
             for {data.type}

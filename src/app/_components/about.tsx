@@ -15,7 +15,7 @@ export default function About() {
         </div>
 
         <div id="segment-2" className="block">
-          <Label>about</Label>
+          <Label className="!mb-[8px]">about</Label>
           <div className="flex flex-col gap-[32px] xl:gap-[56px]">
             <div className="flex flex-col gap-[32px]">
               <Title>Let&apos;s bring your property projects to life with complete peace of mind</Title>
